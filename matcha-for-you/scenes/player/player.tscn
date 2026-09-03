@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ca70timi7ufgy"]
 
+[ext_resource type="Script" uid="uid://eh72wrmeg0i2" path="res://scripts/player.gd" id="1_gmlin"]
 [ext_resource type="Texture2D" uid="uid://bu4h214gko1sx" path="res://assets/sprites/character/Kamu (Entire).png" id="1_wr5hl"]
 [ext_resource type="Texture2D" uid="uid://c1pmryh50r7jb" path="res://assets/sprites/character/Kamu (Walk).png" id="2_dovo2"]
 
@@ -569,13 +570,14 @@ animations = [{
 size = Vector2(8, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=180642863]
+script = ExtResource("1_gmlin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=642543484]
 sprite_frames = SubResource("SpriteFrames_rwxtm")
 animation = &"pickup"
 autoplay = "idle_down"
-frame_progress = 0.53568166
+frame_progress = 0.29505777
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666804102]
-position = Vector2(0, 7)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_jps1b")
