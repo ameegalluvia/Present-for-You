@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cljp51kljjyht"
-path="res://.godot/imported/Kamu (Pickup).png-1d69fd2841972249c6fcb2a54e16beaf.ctex"
+uid="uid://bib178dp31j6v"
+path="res://.godot/imported/Lievia (Entire).png-2cc5be6ca6c2bec1075dde41e98ed43e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/character/Kamu (Pickup).png"
-dest_files=["res://.godot/imported/Kamu (Pickup).png-1d69fd2841972249c6fcb2a54e16beaf.ctex"]
+source_file="res://assets/sprites/character/Lievia (Entire).png"
+dest_files=["res://.godot/imported/Lievia (Entire).png-2cc5be6ca6c2bec1075dde41e98ed43e.ctex"]
 
 [params]
 

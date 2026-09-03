@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by4w6gpqljh1f"
-path="res://.godot/imported/Kamu (Idle).png-cec0a29d854d8bd80400cc3bca34d909.ctex"
+uid="uid://bu4h214gko1sx"
+path="res://.godot/imported/Kamu (Entire).png-4e9cc497d996bdccc478a791b16d00d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/character/Kamu (Idle).png"
-dest_files=["res://.godot/imported/Kamu (Idle).png-cec0a29d854d8bd80400cc3bca34d909.ctex"]
+source_file="res://assets/sprites/character/Kamu (Entire).png"
+dest_files=["res://.godot/imported/Kamu (Entire).png-4e9cc497d996bdccc478a791b16d00d3.ctex"]
 
 [params]
 
