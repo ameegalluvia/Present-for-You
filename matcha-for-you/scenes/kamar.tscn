@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://d4hlucp5xp1mo"]
 
-[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="1_inopa"]
+[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="1_um563"]
 
 [node name="Kamar" type="Node2D" unique_id=2051207229]
 
-[node name="Player" parent="." unique_id=180642863 instance=ExtResource("1_inopa")]
+[node name="Player" parent="." unique_id=180642863 instance=ExtResource("1_um563")]
 position = Vector2(-59, 18)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=464267046]
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=165242803]
+offset_left = -131.0
+offset_top = 52.0
+offset_right = -91.0
+offset_bottom = 92.0
+scale = Vector2(0.35999972, 0.35999972)
+deadzone_ratio = 0.3
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"

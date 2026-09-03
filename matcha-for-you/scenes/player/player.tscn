@@ -576,7 +576,7 @@ script = ExtResource("1_gmlin")
 sprite_frames = SubResource("SpriteFrames_rwxtm")
 animation = &"pickup"
 autoplay = "idle_down"
-frame_progress = 0.29505777
+frame_progress = 0.7343501
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666804102]
 position = Vector2(0, -2)

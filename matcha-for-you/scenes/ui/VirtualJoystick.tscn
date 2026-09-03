@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bn76i5y0b11wm"]
+
+[node name="VirtualJoystick" type="Control" unique_id=1536458933]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_bottom = -80.0
+grow_vertical = 0
+
+[node name="Base" type="TextureRect" parent="." unique_id=401154161]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+
+[node name="Knob" type="ColorRect" parent="Base" unique_id=654861889]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 56.0
+offset_bottom = 56.0
+color = Color(0.95142967, 0, 0.18916908, 1)
