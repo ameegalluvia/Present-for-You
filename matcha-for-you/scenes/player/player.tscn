@@ -566,18 +566,37 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps1b"]
-size = Vector2(8, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3my7"]
+radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=180642863]
 script = ExtResource("1_gmlin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=642543484]
+position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_rwxtm")
-animation = &"pickup"
+animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.7343501
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666804102]
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_jps1b")
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_n3my7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=951507596]
+zoom = Vector2(1.97, 1.97)
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="Camera2D" unique_id=1557462000]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = 40.0
+offset_right = -86.0
+offset_bottom = 80.0
+grow_vertical = 0
+scale = Vector2(0.49200976, 0.49200976)
+deadzone_ratio = 0.3
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"

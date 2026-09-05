@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var last_direction: String = "down"  # arah terakhir, dipakai buat idle
+var last_direction: String = "down"  
 
 func _physics_process(delta: float) -> void:
 	var input_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -17,7 +17,6 @@ func _update_animation(input_vector: Vector2) -> void:
 		animated_sprite.play("idle_" + last_direction)
 		return
 
-	# tentuin arah dominan (horizontal atau vertical yang lebih besar)
 	if abs(input_vector.x) > abs(input_vector.y):
 		last_direction = "right" if input_vector.x > 0 else "left"
 	else:
