@@ -23,3 +23,7 @@ func _update_animation(input_vector: Vector2) -> void:
 		last_direction = "down" if input_vector.y > 0 else "up"
 
 	animated_sprite.play("walk_" + last_direction)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
