@@ -14,6 +14,7 @@ func collect_item(item_name: String) -> void:
 		"ice": has_ice = true
 	print("Status sekarang -> matcha:", has_matcha, " milk:", has_milk, " cup:", has_cup, " ice:", has_ice)
 		
+
 func has_initial_items() -> bool:
 	return has_matcha and has_milk and has_cup
 

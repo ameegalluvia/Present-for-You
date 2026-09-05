@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b3xk1eo1tv6ry"]
 
 [ext_resource type="Texture2D" uid="uid://bddhlplk2s83a" path="res://assets/tilesets/Tileset_16x16_6.png" id="1_y6kh7"]
+[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_ifpnw"]
 
 [node name="Lievia" type="Node2D" unique_id=1250251096]
 
 [node name="Tileset16x166" type="Sprite2D" parent="." unique_id=946646648]
-position = Vector2(254, 171)
+position = Vector2(-8, -19)
 texture = ExtResource("1_y6kh7")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1366850660]
-position = Vector2(310, 177)
+[node name="Player" parent="." unique_id=180642863 instance=ExtResource("2_ifpnw")]

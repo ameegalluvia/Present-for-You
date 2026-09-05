@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://b1arbpbhtv3di"]
+
+[ext_resource type="Script" uid="uid://bimw7rtshf8w2" path="res://scripts/MessageBox.gd" id="1_xhe8j"]
+[ext_resource type="Texture2D" uid="uid://c4e6mhwdysakk" path="res://assets/sprites/ui/Modern_UI_Style_1.png" id="2_0037a"]
+[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="3_mx502"]
+[ext_resource type="Texture2D" uid="uid://bvakkqe74cfme" path="res://assets/sprites/character/Kamu Portrait.png" id="4_mx502"]
+[ext_resource type="Texture2D" uid="uid://0lcgplpb20f1" path="res://assets/sprites/character/Lievia Portrait.png" id="5_3p2yj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jps1b"]
+atlas = ExtResource("2_0037a")
+region = Rect2(69.08266, 45.60263, 42.760254, 20.56231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkjd8"]
+atlas = ExtResource("4_mx502")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyint"]
+atlas = ExtResource("4_mx502")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enx7t"]
+atlas = ExtResource("4_mx502")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kteku"]
+atlas = ExtResource("4_mx502")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbcef"]
+atlas = ExtResource("4_mx502")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6lbw"]
+atlas = ExtResource("4_mx502")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvb0v"]
+atlas = ExtResource("4_mx502")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbu7f"]
+atlas = ExtResource("4_mx502")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu611"]
+atlas = ExtResource("4_mx502")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcxln"]
+atlas = ExtResource("4_mx502")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7wlo"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aalci"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kitke"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yo63"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5c2m"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3mg3"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vwl1"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gch3"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlqic"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72bso"]
+atlas = ExtResource("5_3p2yj")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7x6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkjd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyint")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enx7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kteku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbcef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6lbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvb0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbu7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu611")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcxln")
+}],
+"loop": 1,
+"name": &"kamu_talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7wlo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aalci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kitke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yo63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5c2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3mg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vwl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gch3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlqic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72bso")
+}],
+"loop": 1,
+"name": &"lievia_talk",
+"speed": 5.0
+}]
+
+[node name="MessageBox" type="CanvasLayer" unique_id=173375979]
+script = ExtResource("1_xhe8j")
+
+[node name="Box" type="Control" parent="." unique_id=1180260726]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -124.0
+offset_right = -5.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Background" type="NinePatchRect" parent="Box" unique_id=1408653648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 173.00002
+offset_top = 8.0
+offset_right = 27271.332
+offset_bottom = 5113.43
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.015, 0.015)
+texture = SubResource("AtlasTexture_jps1b")
+patch_margin_left = 2
+patch_margin_top = 4
+patch_margin_right = 2
+patch_margin_bottom = 3
+
+[node name="TextLabel" type="Label" parent="Box" unique_id=2075251667]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 48.0
+offset_right = 552.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mx502")
+theme_override_font_sizes/font_size = 13
+text = "Hai sayang"
+
+[node name="NotifLabel" type="Label" parent="Box" unique_id=1398230357]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 36.0
+offset_right = 538.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mx502")
+theme_override_font_sizes/font_size = 13
+text = "HBD"
+
+[node name="SpeakerLabel" type="Label" parent="Box" unique_id=1048106186]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 24.0
+offset_right = 325.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.027654473, 0, 0.2986898, 1)
+theme_override_fonts/font = ExtResource("3_mx502")
+theme_override_font_sizes/font_size = 16
+text = "Lievia"
+
+[node name="PortraitLievia" type="AnimatedSprite2D" parent="Box" unique_id=1941081083]
+visible = false
+position = Vector2(229.4, 46.399994)
+scale = Vector2(2.4, 2.4)
+sprite_frames = SubResource("SpriteFrames_e7x6t")
+animation = &"lievia_talk"
+frame_progress = 0.8956449
+
+[node name="PortraitKamu" type="AnimatedSprite2D" parent="Box" unique_id=1041033014]
+visible = false
+position = Vector2(229.4, 46.399994)
+scale = Vector2(2.4, 2.4)
+sprite_frames = SubResource("SpriteFrames_e7x6t")
+animation = &"kamu_talk"
+frame_progress = 0.23074447

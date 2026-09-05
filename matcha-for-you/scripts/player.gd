@@ -4,10 +4,17 @@ extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+@onready var joystick: Control = $"Camera2D/VirtualJoystick"
+
 var last_direction: String = "down"  
 
 func _physics_process(delta: float) -> void:
-	var input_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if MessageBox.is_dialogue_mode:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	
+	var input_vector: Vector2 = joystick.output
 	velocity = input_vector * speed
 	move_and_slide()
 	_update_animation(input_vector)
