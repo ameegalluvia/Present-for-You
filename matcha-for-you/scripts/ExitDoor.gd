@@ -12,5 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 		ice_pickup.visible = true
 		body.global_position -= Vector2(0, 10)
 	elif GameState.all_items_collected():
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 		get_tree().change_scene_to_file("res://scenes/Lievia.tscn")
 		

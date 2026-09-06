@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameState="*uid://c4ymjsr4h0g03"
 MessageBox="*uid://b1arbpbhtv3di"
+TransitionScreen="*uid://bhnapcn2ku4ln"
 
 [display]
 

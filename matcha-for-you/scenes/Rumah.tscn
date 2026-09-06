@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://d4hlucp5xp1mo"]
 
-[ext_resource type="Script" uid="uid://dlej4djpkof0u" path="res://scenes/dialog_awal.gd" id="1_rvf7k"]
+[ext_resource type="Script" uid="uid://dlej4djpkof0u" path="res://scripts/dialog_awal.gd" id="1_rvf7k"]
 [ext_resource type="Texture2D" uid="uid://rxwucvax3nf8" path="res://assets/tilesets/Tileset_16x16_19.png" id="1_v70ow"]
 [ext_resource type="Texture2D" uid="uid://crxxxtwrfv3bi" path="res://assets/tilesets/Tileset_16x16_8.png" id="2_d548m"]
 [ext_resource type="Texture2D" uid="uid://dahe4crxustvw" path="res://assets/tilesets/Room_Builder_Floor_Shadows_16x16.png" id="3_70f3x"]
@@ -148,10 +148,8 @@ texture = ExtResource("2_d548m")
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
-1:1/0/terrain = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
-2:1/0/terrain = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -163,10 +161,8 @@ texture = ExtResource("2_d548m")
 0:2/0 = 0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
-1:2/0/terrain = 0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
-2:2/0/terrain = 0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -178,9 +174,7 @@ texture = ExtResource("2_d548m")
 0:3/0 = 0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
-1:3/0/terrain = 0
 2:3/0 = 0
-2:3/0/terrain = 0
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:3/0 = 0
@@ -191,9 +185,7 @@ texture = ExtResource("2_d548m")
 0:4/0 = 0
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
-1:4/0/terrain = 0
 2:4/0 = 0
-2:4/0/terrain = 0
 3:4/0 = 0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:4/0 = 0
@@ -24388,6 +24380,7 @@ fill = 1
 fill_from = Vector2(0.4871795, 0.45299146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jps1b"]
+size = Vector2(15.909012, 19)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_77v7f"]
 atlas = ExtResource("32_laqnb")
@@ -24424,6 +24417,45 @@ animations = [{
 "name": &"idle_matcha",
 "speed": 5.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxk60"]
+atlas = ExtResource("32_laqnb")
+region = Rect2(13, 614, 63, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12h5o"]
+atlas = ExtResource("32_laqnb")
+region = Rect2(76, 614, 63, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eup4r"]
+atlas = ExtResource("32_laqnb")
+region = Rect2(139, 614, 63, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvxri"]
+atlas = ExtResource("32_laqnb")
+region = Rect2(202, 614, 63, 102)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rwxtm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxk60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12h5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eup4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvxri")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_laqnb"]
+size = Vector2(15.909195, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxtm"]
 
@@ -24554,24 +24586,51 @@ visible = true
 [node name="MatchaMilkPickup" type="Area2D" parent="Interactables" unique_id=411545667]
 position = Vector2(704, 107)
 script = ExtResource("29_d548m")
-item_names = Array[String](["matcha", "milk"])
+item_names = Array[String](["matcha"])
 
 [node name="PointLight2D6" type="PointLight2D" parent="Interactables/MatchaMilkPickup" unique_id=1816407068]
 position = Vector2(-6, 1)
 texture = SubResource("GradientTexture2D_rdybt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/MatchaMilkPickup" unique_id=594563378]
-position = Vector2(-9, -4)
+position = Vector2(-7.5, -4.5)
 scale = Vector2(0.44, 1)
 shape = SubResource("RectangleShape2D_jps1b")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Interactables/MatchaMilkPickup" unique_id=771433667]
+[node name="Matcha" type="AnimatedSprite2D" parent="Interactables/MatchaMilkPickup" unique_id=771433667]
 position = Vector2(-8.999939, -2)
 scale = Vector2(0.15298426, 0.15298426)
 sprite_frames = SubResource("SpriteFrames_jps1b")
 animation = &"idle_matcha"
 autoplay = "idle_matcha"
 frame_progress = 0.57383966
+
+[node name="Susu" type="AnimatedSprite2D" parent="Interactables/MatchaMilkPickup" unique_id=85639755]
+position = Vector2(6, -4)
+scale = Vector2(0.14059155, 0.14059155)
+sprite_frames = SubResource("SpriteFrames_rwxtm")
+frame_progress = 0.091432504
+
+[node name="MilkPickup" type="Area2D" parent="Interactables" unique_id=1361432867]
+position = Vector2(704, 107)
+script = ExtResource("29_d548m")
+item_names = Array[String](["milk"])
+
+[node name="PointLight2D6" type="PointLight2D" parent="Interactables/MilkPickup" unique_id=1685548766]
+position = Vector2(8, 1)
+texture = SubResource("GradientTexture2D_rdybt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/MilkPickup" unique_id=1848862957]
+position = Vector2(6.5, -4.5)
+scale = Vector2(0.44, 1)
+shape = SubResource("RectangleShape2D_laqnb")
+
+[node name="Susu" type="AnimatedSprite2D" parent="Interactables/MilkPickup" unique_id=1045303004]
+position = Vector2(6, -4)
+scale = Vector2(0.14059155, 0.14059155)
+sprite_frames = SubResource("SpriteFrames_rwxtm")
+autoplay = "default"
+frame_progress = 0.00079709303
 
 [node name="CupPickup" type="Area2D" parent="Interactables" unique_id=631233775]
 position = Vector2(-8, 10)
@@ -24587,7 +24646,7 @@ position = Vector2(656, 92)
 scale = Vector2(0.5199902, 1)
 shape = SubResource("RectangleShape2D_rwxtm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Interactables/CupPickup" unique_id=1172938595]
+[node name="Cangkir" type="AnimatedSprite2D" parent="Interactables/CupPickup" unique_id=1172938595]
 position = Vector2(657, 97)
 scale = Vector2(0.1604017, 0.1604017)
 sprite_frames = SubResource("SpriteFrames_e7x6t")
@@ -24610,7 +24669,7 @@ position = Vector2(469, 3)
 scale = Vector2(0.44, 1)
 shape = SubResource("RectangleShape2D_e7x6t")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Interactables/IcePickup" unique_id=459182655]
+[node name="Es" type="AnimatedSprite2D" parent="Interactables/IcePickup" unique_id=459182655]
 position = Vector2(469, 4)
 scale = Vector2(0.1753983, 0.1753983)
 sprite_frames = SubResource("SpriteFrames_6usuf")
@@ -24642,6 +24701,7 @@ energy = 0.56
 texture = SubResource("GradientTexture2D_rwxtm")
 
 [connection signal="body_entered" from="Interactables/MatchaMilkPickup" to="Interactables/MatchaMilkPickup" method="_on_body_entered"]
+[connection signal="body_entered" from="Interactables/MilkPickup" to="Interactables/MilkPickup" method="_on_body_entered"]
 [connection signal="body_entered" from="Interactables/CupPickup" to="Interactables/CupPickup" method="_on_body_entered"]
 [connection signal="body_entered" from="Interactables/IcePickup" to="Interactables/IcePickup" method="_on_body_entered"]
 [connection signal="body_entered" from="Interactables/Pintu keluar" to="Interactables/Pintu keluar" method="_on_body_entered"]
