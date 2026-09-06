@@ -11,6 +11,9 @@ func collect_item(item_name: String) -> void:
 		"milk": has_milk = true
 		"cup": has_cup = true
 		"ice": has_ice = true
+		
+func dont_have_items() -> bool:
+	return not has_matcha or not has_milk or not has_cup
 
 func has_initial_items() -> bool:
 	return has_matcha and has_milk and has_cup

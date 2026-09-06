@@ -6,7 +6,10 @@ func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
 	
-	if GameState.has_initial_items() and not GameState.has_ice:
+	if GameState.dont_have_items():
+		body.global_position -= Vector2(0, 10)
+		MessageBox.show_notification("Ambil hadiah dulu yaa lipii")
+	elif GameState.has_initial_items() and not GameState.has_ice:
 		MessageBox.show_notification("Oh iya, butuh es batu :D")
 		ice_pickup.monitoring = true
 		ice_pickup.visible = true
