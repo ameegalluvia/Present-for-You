@@ -575,6 +575,7 @@ script = ExtResource("1_gmlin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=642543484]
 physics_interpolation_mode = 1
+visible = false
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_rwxtm")
 animation = &"idle_down"

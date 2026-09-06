@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal dialogue_finished
+
 @onready var box: Control = $Box
 @onready var notif_label: Label = $Box/NotifLabel
 @onready var portrait_kamu: AnimatedSprite2D = $Box/PortraitKamu
@@ -54,9 +56,10 @@ func advance_dialogue() -> void:
 	if current_index >= dialogue_lines.size():
 		box.hide()
 		is_dialogue_mode = false
+		dialogue_finished.emit()
 	else:
 		_display_current_line()
-
+		
 func _hide_dialogue_elements() -> void:
 	speaker_label.hide()
 	text_label.hide()

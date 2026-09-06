@@ -10,6 +10,11 @@ func _ready() -> void:
 		{"speaker": "Kamu", "text": "Wuah bolehh nihh?"},
 		{"speaker": "Lievia", "text": "Bolehh paiz"},
 		{"speaker": "Kamu", "text": "Okeii gas otw babaii"},
-		{"speaker": "Lievia", "text": "Eee-"},
-		{"speaker": "Kamu", "text": "Otanjoubi Omedetouuu!!"},
+		{"speaker": "Lievia", "text": "Eee-"}
 	])
+	
+	await MessageBox.dialogue_finished
+	
+	await MessageBox.show_notification("Hehe hari ini ulang tahun Lievia", 4.0)
+	await MessageBox.show_notification("Aku mau surprise in dia ahh", 4.0)
+	await MessageBox.show_notification("Objective: Ambil matcha, susu, dan cangkir!", 4.5)
