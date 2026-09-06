@@ -235,7 +235,7 @@ position = Vector2(229.4, 46.399994)
 scale = Vector2(2.4, 2.4)
 sprite_frames = SubResource("SpriteFrames_e7x6t")
 animation = &"lievia_talk"
-frame_progress = 0.07459587
+frame_progress = 0.027864344
 
 [node name="PortraitKamu" type="AnimatedSprite2D" parent="Box" unique_id=1041033014]
 visible = false
@@ -243,4 +243,4 @@ position = Vector2(229.4, 46.399994)
 scale = Vector2(2.4, 2.4)
 sprite_frames = SubResource("SpriteFrames_e7x6t")
 animation = &"kamu_talk"
-frame_progress = 0.4096808
+frame_progress = 0.36294544

@@ -12,11 +12,13 @@ signal dialogue_finished
 var dialogue_lines: Array = []
 var current_index: int = 0
 var is_dialogue_mode: bool = false
+var is_busy: bool = false
 
 func _ready() -> void:
 	box.hide()
 
 func show_notification(text: String, duration: float = 2.0) -> void:
+	is_busy = true
 	is_dialogue_mode = false
 	_hide_dialogue_elements()
 	notif_label.show()
@@ -24,8 +26,10 @@ func show_notification(text: String, duration: float = 2.0) -> void:
 	box.show()
 	await get_tree().create_timer(duration).timeout
 	box.hide()
+	is_busy = false
 
 func show_dialogue(lines: Array) -> void:
+	is_busy = true
 	is_dialogue_mode = true
 	notif_label.hide()
 	speaker_label.show()
@@ -56,6 +60,7 @@ func advance_dialogue() -> void:
 	if current_index >= dialogue_lines.size():
 		box.hide()
 		is_dialogue_mode = false
+		is_busy = false
 		dialogue_finished.emit()
 	else:
 		_display_current_line()

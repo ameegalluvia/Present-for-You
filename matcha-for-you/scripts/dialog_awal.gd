@@ -1,6 +1,10 @@
 extends Node2D
 
+@onready var player: CharacterBody2D = $"Player"
+
 func _ready() -> void:
+	player.override_animation = "sit_right"
+	
 	MessageBox.show_dialogue([
 		{"speaker": "Lievia", "text": "Halo paiz, lagi ngapain?"},
 		{"speaker": "Kamu", "text": "Lagi santai aja di kamar, kalau kamu?"},
@@ -14,7 +18,11 @@ func _ready() -> void:
 	])
 	
 	await MessageBox.dialogue_finished
+	MessageBox.is_busy = true
+	await get_tree().create_timer(1.0).timeout
 	
 	await MessageBox.show_notification("Hehe hari ini hari ulang tahun Lievia...", 4.0)
 	await MessageBox.show_notification("Aku mau surprise in dia ahh <3", 4.0)
-	await MessageBox.show_notification("Objective: Ambil matcha, susu, dan cangkir!", 4.5)
+	
+	player.override_animation = ""
+	

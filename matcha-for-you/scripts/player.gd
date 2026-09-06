@@ -1,15 +1,21 @@
 extends CharacterBody2D
 
-@export var speed: float = 50.0
+@export var speed: float = 40.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var last_direction: String = "down"
 
+var override_animation: String = ""
+
 func _physics_process(delta: float) -> void:
-	if MessageBox.is_dialogue_mode:
+	if MessageBox.is_busy:
 		velocity = Vector2.ZERO
 		move_and_slide()
+		if override_animation != "":
+			animated_sprite.play(override_animation)
+		else:
+			animated_sprite.play("idle_" + last_direction)
 		return
 
 	var input_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")

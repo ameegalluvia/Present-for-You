@@ -20,3 +20,4 @@ func has_initial_items() -> bool:
 
 func all_items_collected() -> bool:
 	return has_initial_items() and has_ice
+	

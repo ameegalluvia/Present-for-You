@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2me8ok8h7gtx"]
+
+[ext_resource type="Script" uid="uid://qsw3dx67a2tv" path="res://scripts/QuestButton.gd" id="1_c1pvs"]
+[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="1_d4ss6"]
+
+[node name="QuestButton" type="CanvasLayer" unique_id=1208722649]
+script = ExtResource("1_c1pvs")
+
+[node name="Button" type="Button" parent="." unique_id=2068849535]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -87.0
+offset_top = 28.0
+offset_right = -32.0
+offset_bottom = 59.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_d4ss6")
+text = "Tugas"
