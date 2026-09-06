@@ -15,6 +15,6 @@ func _ready() -> void:
 	
 	await MessageBox.dialogue_finished
 	
-	await MessageBox.show_notification("Hehe hari ini ulang tahun Lievia", 4.0)
-	await MessageBox.show_notification("Aku mau surprise in dia ahh", 4.0)
+	await MessageBox.show_notification("Hehe hari ini hari ulang tahun Lievia...", 4.0)
+	await MessageBox.show_notification("Aku mau surprise in dia ahh <3", 4.0)
 	await MessageBox.show_notification("Objective: Ambil matcha, susu, dan cangkir!", 4.5)
