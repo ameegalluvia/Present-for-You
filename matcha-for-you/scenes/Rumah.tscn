@@ -24460,3 +24460,5 @@ shape = SubResource("RectangleShape2D_6usuf")
 [connection signal="body_entered" from="Interactables/CupPickup" to="Interactables/CupPickup" method="_on_body_entered"]
 [connection signal="body_entered" from="Interactables/IcePickup" to="Interactables/IcePickup" method="_on_body_entered"]
 [connection signal="body_entered" from="Interactables/Pintu keluar" to="Interactables/Pintu keluar" method="_on_body_entered"]
+
+[editable path="Player"]

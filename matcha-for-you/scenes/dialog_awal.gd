@@ -11,4 +11,5 @@ func _ready() -> void:
 		{"speaker": "Lievia", "text": "Bolehh paiz"},
 		{"speaker": "Kamu", "text": "Okeii gas otw babaii"},
 		{"speaker": "Lievia", "text": "Eee-"},
+		{"speaker": "Kamu", "text": "Otanjoubi Omedetouuu!!"},
 	])

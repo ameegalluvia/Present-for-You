@@ -570,9 +570,11 @@ animations = [{
 radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=180642863]
+physics_interpolation_mode = 1
 script = ExtResource("1_gmlin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=642543484]
+physics_interpolation_mode = 1
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_rwxtm")
 animation = &"idle_down"
@@ -584,18 +586,24 @@ shape = SubResource("CircleShape2D_n3my7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=951507596]
 zoom = Vector2(1.97, 1.97)
+process_callback = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="Camera2D" unique_id=1557462000]
+[node name="Joystick" type="CanvasLayer" parent="." unique_id=487827538]
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="Joystick" unique_id=1557462000]
 z_index = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = 40.0
-offset_right = -86.0
-offset_bottom = 80.0
+offset_left = 75.0
+offset_top = -115.0
+offset_right = 115.0
+offset_bottom = -75.0
 grow_vertical = 0
-scale = Vector2(0.49200976, 0.49200976)
+scale = Vector2(1.0920084, 1.0920084)
 deadzone_ratio = 0.3
 action_left = &"move_left"
 action_right = &"move_right"
