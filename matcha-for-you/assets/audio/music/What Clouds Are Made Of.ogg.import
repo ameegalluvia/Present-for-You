@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://3h5ibsgq7vqi"
+path="res://.godot/imported/What Clouds Are Made Of.ogg-07f8d0f8fc4fb957f5c932aa5a0f9323.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/What Clouds Are Made Of.ogg"
+dest_files=["res://.godot/imported/What Clouds Are Made Of.ogg-07f8d0f8fc4fb957f5c932aa5a0f9323.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
