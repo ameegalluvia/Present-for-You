@@ -1,21 +1,111 @@
 [gd_scene format=3 uid="uid://dltiansjxxrhb"]
 
+[ext_resource type="Script" uid="uid://blcyga8lxrcdh" path="res://scenes/MainMenu.gd" id="1_0ykhv"]
+[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="2_2wh52"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6usuf"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.8949794, 0.50942534, 9.62615e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.9999998, 0.6184983, 0.23921385, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l72w3"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.28568262, 0.733932, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_826wr"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.35876325, 0.9007816, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucygd"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.81969535, 0, 0.20542729, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mipys"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.9999297, 0.27838865, 0.3467673, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="MainMenu" type="Control" unique_id=942151033]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_0ykhv")
 
-[node name="Label" type="Label" parent="." unique_id=307939652]
+[node name="Present for You" type="Label" parent="." unique_id=1336224456]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 125.0
-offset_right = 428.0
-offset_bottom = 148.0
-text = "MAIN MENU - LIPIA SAYANG"
+offset_left = 244.0
+offset_top = 130.0
+offset_right = 385.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("2_2wh52")
+text = "Present for You"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1040875814]
+[node name="New Game" type="Button" parent="." unique_id=1040875814]
 layout_mode = 0
-offset_left = 271.0
-offset_top = 169.0
-offset_right = 365.0
-offset_bottom = 200.0
-text = "Mulai Main"
+offset_left = 261.0
+offset_top = 168.0
+offset_right = 381.0
+offset_bottom = 199.0
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6usuf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ow34m")
+text = "Mulai Baru"
+
+[node name="Continue" type="Button" parent="." unique_id=325916574]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 211.0
+offset_right = 381.0
+offset_bottom = 242.0
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l72w3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_826wr")
+text = "Lanjutkan"
+
+[node name="Exit" type="Button" parent="." unique_id=382131685]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 252.0
+offset_right = 381.0
+offset_bottom = 283.0
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ucygd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mipys")
+text = "Keluar"
+
+[connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

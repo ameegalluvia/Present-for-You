@@ -20,4 +20,9 @@ func has_initial_items() -> bool:
 
 func all_items_collected() -> bool:
 	return has_initial_items() and has_ice
-	
+
+func reset() -> void: 
+	has_matcha = false 
+	has_milk = false 
+	has_cup = false 
+	has_ice = false
