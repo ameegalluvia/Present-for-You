@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b3xk1eo1tv6ry"]
+
+[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_chn88"]
+
+[sub_resource type="TileSet" id="TileSet_jps1b"]
+
+[node name="Halaman" type="Node2D" unique_id=1250251096]
+
+[node name="Background" type="TileMapLayer" parent="." unique_id=659288122]
+tile_set = SubResource("TileSet_jps1b")
+
+[node name="Player" parent="." unique_id=180642863 instance=ExtResource("2_chn88")]
+
+[node name="Camera2D" parent="Player" index="2" unique_id=951507596]
+limit_left = -178
+
+[editable path="Player"]

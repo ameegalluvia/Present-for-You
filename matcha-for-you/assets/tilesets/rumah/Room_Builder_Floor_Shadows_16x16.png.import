@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j6xwv4xutmpa"
-path="res://.godot/imported/Tileset_16x16_18.png-eec6b6a642fa709b41da69c32b0df01e.ctex"
+uid="uid://dahe4crxustvw"
+path="res://.godot/imported/Room_Builder_Floor_Shadows_16x16.png-66d326aef146c4b06159b984cd706eb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/Tileset_16x16_18.png"
-dest_files=["res://.godot/imported/Tileset_16x16_18.png-eec6b6a642fa709b41da69c32b0df01e.ctex"]
+source_file="res://assets/tilesets/rumah/Room_Builder_Floor_Shadows_16x16.png"
+dest_files=["res://.godot/imported/Room_Builder_Floor_Shadows_16x16.png-66d326aef146c4b06159b984cd706eb1.ctex"]
 
 [params]
 

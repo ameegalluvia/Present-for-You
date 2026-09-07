@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ci38gx2u4n8re"]
+
+[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="1_thghg"]
+[ext_resource type="Script" uid="uid://byepwyop68mcy" path="res://scenes/ui/InteractButton.gd" id="1_y5333"]
+
+[node name="InteractButton" type="CanvasLayer" unique_id=1332471656]
+script = ExtResource("1_y5333")
+
+[node name="Button" type="Button" parent="." unique_id=1981256736]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -158.0
+offset_right = -88.0
+offset_bottom = -143.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_thghg")
+text = "Interaksi"

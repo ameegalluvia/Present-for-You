@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://eh72wrmeg0i2" path="res://scripts/player.gd" id="1_gmlin"]
 [ext_resource type="Texture2D" uid="uid://bu4h214gko1sx" path="res://assets/sprites/character/Kamu (Entire).png" id="1_wr5hl"]
 [ext_resource type="Texture2D" uid="uid://c1pmryh50r7jb" path="res://assets/sprites/character/Kamu (Walk).png" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://bss4l58csisv2" path="res://scenes/player/InteractionRange.gd" id="4_lvxji"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfjak"]
 atlas = ExtResource("1_wr5hl")
@@ -609,3 +610,13 @@ action_left = &"move_left"
 action_right = &"move_right"
 action_up = &"move_up"
 action_down = &"move_down"
+
+[node name="InteractionRange" type="Area2D" parent="." unique_id=381111213]
+script = ExtResource("4_lvxji")
+
+[node name="ZonaInteraksi" type="CollisionShape2D" parent="InteractionRange" unique_id=1366210731]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_n3my7")
+
+[connection signal="area_entered" from="InteractionRange" to="InteractionRange" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractionRange" to="InteractionRange" method="_on_area_exited"]

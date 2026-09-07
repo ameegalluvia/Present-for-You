@@ -22,6 +22,8 @@ MessageBox="*uid://b1arbpbhtv3di"
 TransitionScreen="*uid://bhnapcn2ku4ln"
 QuestManager="*uid://ddqg2no0oq7ty"
 QuestButton="*uid://2me8ok8h7gtx"
+InteractionManager="*uid://ca4sw715ygjki"
+InteractButton="*uid://ci38gx2u4n8re"
 
 [display]
 

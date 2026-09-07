@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://d4hlucp5xp1mo"]
 
 [ext_resource type="Script" uid="uid://dlej4djpkof0u" path="res://scripts/dialog_awal.gd" id="1_rvf7k"]
-[ext_resource type="Texture2D" uid="uid://rxwucvax3nf8" path="res://assets/tilesets/Tileset_16x16_19.png" id="1_v70ow"]
-[ext_resource type="Texture2D" uid="uid://crxxxtwrfv3bi" path="res://assets/tilesets/Tileset_16x16_8.png" id="2_d548m"]
-[ext_resource type="Texture2D" uid="uid://dahe4crxustvw" path="res://assets/tilesets/Room_Builder_Floor_Shadows_16x16.png" id="3_70f3x"]
+[ext_resource type="Texture2D" uid="uid://rxwucvax3nf8" path="res://assets/tilesets/rumah/Tileset_16x16_19.png" id="1_v70ow"]
+[ext_resource type="Texture2D" uid="uid://crxxxtwrfv3bi" path="res://assets/tilesets/rumah/Tileset_16x16_8.png" id="2_d548m"]
+[ext_resource type="Texture2D" uid="uid://dahe4crxustvw" path="res://assets/tilesets/rumah/Room_Builder_Floor_Shadows_16x16.png" id="3_70f3x"]
 [ext_resource type="Texture2D" uid="uid://br75p6sh1d4yl" path="res://assets/sprites/furniture/1_Generic_16x16.png" id="3_utv8i"]
 [ext_resource type="Texture2D" uid="uid://batexdavyt7f4" path="res://assets/sprites/furniture/9_Fishing_16x16.png" id="4_70f3x"]
 [ext_resource type="Texture2D" uid="uid://il43wu6xsy4w" path="res://assets/sprites/furniture/10_Birthday_party_16x16.png" id="5_rvf7k"]
@@ -36,6 +36,8 @@
 [ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="34_77v7f"]
 [ext_resource type="PackedScene" uid="uid://2me8ok8h7gtx" path="res://scenes/ui/QuestButton.tscn" id="35_rdybt"]
 [ext_resource type="Script" uid="uid://6l5ktpqldnl7" path="res://scripts/QuestTrigger.gd" id="36_urs1c"]
+[ext_resource type="PackedScene" uid="uid://ci38gx2u4n8re" path="res://scenes/ui/InteractButton.tscn" id="37_s70a1"]
+[ext_resource type="Script" uid="uid://b3e6no52gwqy6" path="res://scenes/test.gd" id="38_jl5u7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3my7"]
 texture = ExtResource("1_v70ow")
@@ -24534,6 +24536,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_laqnb"]
+size = Vector2(15.909195, 19)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxk60"]
 atlas = ExtResource("32_laqnb")
 region = Rect2(13, 614, 63, 102)
@@ -24569,9 +24574,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_laqnb"]
-size = Vector2(15.909195, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxtm"]
 
@@ -24691,6 +24693,8 @@ fill_from = Vector2(0.50427353, 0.5014245)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5igr"]
 size = Vector2(20, 37)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jps1b"]
+
 [node name="Rumah" type="Node2D" unique_id=2051207229]
 y_sort_enabled = true
 script = ExtResource("1_rvf7k")
@@ -24732,34 +24736,28 @@ limit_bottom = 245
 
 [node name="Interactables" type="Node2D" parent="." unique_id=843123107]
 
-[node name="MatchaMilkPickup" type="Area2D" parent="Interactables" unique_id=411545667]
+[node name="MatchaPickup" type="Area2D" parent="Interactables" unique_id=411545667]
 position = Vector2(704, 107)
 script = ExtResource("29_d548m")
 item_names = Array[String](["matcha"])
 
-[node name="PointLight2D6" type="PointLight2D" parent="Interactables/MatchaMilkPickup" unique_id=1816407068]
+[node name="PointLight2D6" type="PointLight2D" parent="Interactables/MatchaPickup" unique_id=1816407068]
 position = Vector2(-6, 1)
 energy = 2.89
 texture = SubResource("GradientTexture2D_rdybt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/MatchaMilkPickup" unique_id=594563378]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/MatchaPickup" unique_id=594563378]
 position = Vector2(-7.5, -4.5)
 scale = Vector2(0.44, 1)
 shape = SubResource("RectangleShape2D_jps1b")
 
-[node name="Matcha" type="AnimatedSprite2D" parent="Interactables/MatchaMilkPickup" unique_id=771433667]
+[node name="Matcha" type="AnimatedSprite2D" parent="Interactables/MatchaPickup" unique_id=771433667]
 position = Vector2(-8.999939, -2)
 scale = Vector2(0.15298426, 0.15298426)
 sprite_frames = SubResource("SpriteFrames_jps1b")
 animation = &"idle_matcha"
 autoplay = "idle_matcha"
 frame_progress = 0.57383966
-
-[node name="Susu" type="AnimatedSprite2D" parent="Interactables/MatchaMilkPickup" unique_id=85639755]
-position = Vector2(6, -4)
-scale = Vector2(0.14059155, 0.14059155)
-sprite_frames = SubResource("SpriteFrames_rwxtm")
-frame_progress = 0.81633365
 
 [node name="MilkPickup" type="Area2D" parent="Interactables" unique_id=1361432867]
 position = Vector2(704, 107)
@@ -24808,7 +24806,7 @@ frame_progress = 0.5713763
 [node name="IcePickup" type="Area2D" parent="Interactables" unique_id=1119504926]
 visible = false
 position = Vector2(243, 100)
-monitoring = false
+monitorable = false
 script = ExtResource("29_d548m")
 item_names = Array[String](["ice"])
 
@@ -24920,10 +24918,14 @@ new_quest_text = "Tugas: Ambil bahan matcha di Dapur!"
 position = Vector2(139, 49)
 shape = SubResource("RectangleShape2D_b5igr")
 
-[connection signal="body_entered" from="Interactables/MatchaMilkPickup" to="Interactables/MatchaMilkPickup" method="_on_body_entered"]
-[connection signal="body_entered" from="Interactables/MilkPickup" to="Interactables/MilkPickup" method="_on_body_entered"]
-[connection signal="body_entered" from="Interactables/CupPickup" to="Interactables/CupPickup" method="_on_body_entered"]
-[connection signal="body_entered" from="Interactables/IcePickup" to="Interactables/IcePickup" method="_on_body_entered"]
+[node name="InteractButton" parent="." unique_id=1332471656 instance=ExtResource("37_s70a1")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=165784393]
+script = ExtResource("38_jl5u7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574963058]
+shape = SubResource("CircleShape2D_jps1b")
+
 [connection signal="body_entered" from="Interactables/Pintu keluar" to="Interactables/Pintu keluar" method="_on_body_entered"]
 [connection signal="body_entered" from="QuestMatcha" to="QuestMatcha" method="_on_body_entered"]
 
