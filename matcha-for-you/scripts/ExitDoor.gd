@@ -13,7 +13,6 @@ func _on_body_entered(body: Node2D) -> void:
 		ice_pickup.set_deferred("monitorable", true)
 		ice_pickup.visible = true
 	elif GameState.all_items_collected():
-		QuestManager.complete_quest()
 		TransitionScreen.transition()
 		await TransitionScreen.on_transition_finished
 		get_tree().change_scene_to_file("res://scenes/Halaman.tscn")

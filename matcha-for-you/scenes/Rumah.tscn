@@ -37,7 +37,6 @@
 [ext_resource type="PackedScene" uid="uid://2me8ok8h7gtx" path="res://scenes/ui/QuestButton.tscn" id="35_rdybt"]
 [ext_resource type="Script" uid="uid://6l5ktpqldnl7" path="res://scripts/QuestTrigger.gd" id="36_urs1c"]
 [ext_resource type="PackedScene" uid="uid://ci38gx2u4n8re" path="res://scenes/ui/InteractButton.tscn" id="37_s70a1"]
-[ext_resource type="Script" uid="uid://b3e6no52gwqy6" path="res://scenes/test.gd" id="38_jl5u7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3my7"]
 texture = ExtResource("1_v70ow")
@@ -24693,8 +24692,6 @@ fill_from = Vector2(0.50427353, 0.5014245)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5igr"]
 size = Vector2(20, 37)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jps1b"]
-
 [node name="Rumah" type="Node2D" unique_id=2051207229]
 y_sort_enabled = true
 script = ExtResource("1_rvf7k")
@@ -24919,12 +24916,6 @@ position = Vector2(139, 49)
 shape = SubResource("RectangleShape2D_b5igr")
 
 [node name="InteractButton" parent="." unique_id=1332471656 instance=ExtResource("37_s70a1")]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=165784393]
-script = ExtResource("38_jl5u7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574963058]
-shape = SubResource("CircleShape2D_jps1b")
 
 [connection signal="body_entered" from="Interactables/Pintu keluar" to="Interactables/Pintu keluar" method="_on_body_entered"]
 [connection signal="body_entered" from="QuestMatcha" to="QuestMatcha" method="_on_body_entered"]
