@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dltiansjxxrhb"]
+
+[node name="MainMenu" type="Control" unique_id=942151033]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="." unique_id=307939652]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 125.0
+offset_right = 428.0
+offset_bottom = 148.0
+text = "MAIN MENU - LIPIA SAYANG"
+
+[node name="Button" type="Button" parent="." unique_id=1040875814]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 169.0
+offset_right = 365.0
+offset_bottom = 200.0
+text = "Mulai Main"

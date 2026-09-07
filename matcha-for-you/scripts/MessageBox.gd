@@ -13,6 +13,7 @@ var dialogue_lines: Array = []
 var current_index: int = 0
 var is_dialogue_mode: bool = false
 var is_busy: bool = false
+var session_id: int = 0
 
 func _ready() -> void:
 	box.hide()
@@ -20,17 +21,22 @@ func _ready() -> void:
 func show_notification(text: String, duration: float = 2.0) -> void:
 	AudioManager.play_sfx(preload("res://assets/audio/sfx/SFX_Positive_Feedback_008.wav"))
 	is_busy = true
+	session_id += 1
+	var this_session: int = session_id
 	is_dialogue_mode = false
 	_hide_dialogue_elements()
 	notif_label.show()
 	notif_label.text = text
 	box.show()
-	await get_tree().create_timer(duration).timeout
+	await get_tree().create_timer(duration, false).timeout
+	if this_session != session_id:
+		return
 	box.hide()
 	is_busy = false
 
 func show_dialogue(lines: Array) -> void:
 	is_busy = true
+	session_id += 1
 	is_dialogue_mode = true
 	notif_label.hide()
 	speaker_label.show()
@@ -43,14 +49,14 @@ func _display_current_line() -> void:
 	var line: Dictionary = dialogue_lines[current_index]
 	speaker_label.text = line.speaker
 	text_label.text = line.text
-	
 	portrait_kamu.hide()
 	portrait_lievia.hide()
-	
 	if line.speaker == "Kamu":
+		AudioManager.play_sfx(preload("res://assets/audio/sfx/SFX_Dialogue_VO_Frank_004.wav"))
 		portrait_kamu.show()
 		portrait_kamu.play("kamu_talk")
 	elif line.speaker == "Lievia":
+		AudioManager.play_sfx(preload("res://assets/audio/sfx/SFX_Dialogue_VO_Agathe_003.wav"))
 		portrait_lievia.show()
 		portrait_lievia.play("lievia_talk")
 
@@ -65,7 +71,15 @@ func advance_dialogue() -> void:
 		dialogue_finished.emit()
 	else:
 		_display_current_line()
-		
+
+func force_close() -> void:
+	session_id += 1
+	dialogue_lines.clear()
+	current_index = 0
+	is_dialogue_mode = false
+	is_busy = false
+	box.hide()
+
 func _hide_dialogue_elements() -> void:
 	speaker_label.hide()
 	text_label.hide()

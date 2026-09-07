@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://cxfc8kpw2bv3v"]
+
+[ext_resource type="Script" uid="uid://cvqxojl65cjuv" path="res://scripts/PauseMenu.gd" id="1_furg7"]
+[ext_resource type="Texture2D" uid="uid://c4e6mhwdysakk" path="res://assets/sprites/ui/Modern_UI_Style_1.png" id="2_hyukf"]
+[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="3_n5dsq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jps1b"]
+atlas = ExtResource("2_hyukf")
+region = Rect2(608, 256, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jps1b"]
+bg_color = Color(0, 0, 0, 0.7137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukcvp"]
+bg_color = Color(0.09206522, 0.09315387, 0.096136056, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.8580636, 0, 0.11748343, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5dsq"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(0.99990004, 0.35491043, 0.3304466, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh52"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(3.4172833e-06, 0.6656652, 0.08920526, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5twic"]
+content_margin_left = 13.0
+content_margin_right = 13.0
+bg_color = Color(3.8023293e-06, 0.8407151, 0.12423246, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1856234732]
+layer = 100
+script = ExtResource("1_furg7")
+
+[node name="PauseButton" type="Button" parent="." unique_id=1981530717]
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 34.0
+scale = Vector2(1.7224574, 1.7224574)
+icon = SubResource("AtlasTexture_jps1b")
+flat = true
+
+[node name="Panel" type="Panel" parent="." unique_id=994338639]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jps1b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=31231884]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 97.0
+offset_right = 490.0
+offset_bottom = 264.0
+
+[node name="Pause" type="Label" parent="Panel/VBoxContainer" unique_id=125525830]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+text = "Pause dulu yaa :D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer" unique_id=404754072]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+text = "Lanjut Lipii"
+
+[node name="Musik" type="Label" parent="Panel/VBoxContainer" unique_id=16783230]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+text = "Musik:"
+
+[node name="MusicSlider" type="HSlider" parent="Panel/VBoxContainer" unique_id=1579215882]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="SFX" type="Label" parent="Panel/VBoxContainer" unique_id=67525871]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+text = "Efek Suara:"
+
+[node name="SfxSlider" type="HSlider" parent="Panel/VBoxContainer" unique_id=129179543]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="MainMenuButton" type="Button" parent="Panel/VBoxContainer" unique_id=2050015112]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+text = "Mo ke Main Menu?"
+
+[node name="ConfirmPanel" type="Panel" parent="Panel" unique_id=1065330551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ukcvp")
+
+[node name="Label" type="Label" parent="Panel/ConfirmPanel" unique_id=1446654688]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.5
+offset_top = -37.0
+offset_right = 101.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+text = "Yakin mau ke Main Menu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ConfirmPanel" unique_id=960456459]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 175.0
+offset_right = 383.0
+offset_bottom = 215.0
+alignment = 1
+
+[node name="YesButton" type="Button" parent="Panel/ConfirmPanel/HBoxContainer" unique_id=1956318685]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ykhv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n5dsq")
+text = "Iyaa"
+
+[node name="NoButton" type="Button" parent="Panel/ConfirmPanel/HBoxContainer" unique_id=976067369]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wh52")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5twic")
+text = "Engga"
