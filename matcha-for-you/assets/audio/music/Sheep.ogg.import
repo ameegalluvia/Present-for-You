@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Sheep.ogg-9c4bf9453aa9aca43a566c2476865f13.og
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

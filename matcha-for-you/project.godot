@@ -15,6 +15,10 @@ run/main_scene="uid://d4hlucp5xp1mo"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://povqld5bp754"
+
 [autoload]
 
 GameState="*uid://c4ymjsr4h0g03"
@@ -24,6 +28,7 @@ QuestManager="*uid://ddqg2no0oq7ty"
 QuestButton="*uid://2me8ok8h7gtx"
 InteractionManager="*uid://ca4sw715ygjki"
 InteractButton="*uid://ci38gx2u4n8re"
+AudioManager="*uid://ba6w0ajivcbig"
 
 [display]
 

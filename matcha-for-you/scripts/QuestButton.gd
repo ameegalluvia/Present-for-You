@@ -15,4 +15,5 @@ func _on_quest_cleared() -> void:
 	button.hide()
 
 func _on_button_pressed() -> void:
+	AudioManager.play_sfx(preload("res://assets/audio/sfx/SFX_Button_004.wav"))
 	MessageBox.show_notification(QuestManager.current_quest, 3.0)

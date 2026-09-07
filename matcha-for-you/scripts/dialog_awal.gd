@@ -5,6 +5,9 @@ extends Node2D
 func _ready() -> void:
 	player.override_animation = "sit_right"
 	
+	var bgm = preload("res://assets/audio/music/Sheep.ogg")
+	AudioManager.play_music(bgm)
+	
 	MessageBox.show_dialogue([
 		{"speaker": "Lievia", "text": "Halo paiz, lagi ngapain?"},
 		{"speaker": "Kamu", "text": "Lagi santai aja di kamar, kalau kamu?"},

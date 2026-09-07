@@ -13,4 +13,5 @@ func hide_button() -> void:
 	button.hide() 
 	
 func _on_pressed() -> void: 
+	AudioManager.play_sfx(preload("res://assets/audio/sfx/SFX_Button_004.wav"))
 	InteractionManager.try_interact()

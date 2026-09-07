@@ -18,6 +18,7 @@ func _ready() -> void:
 	box.hide()
 
 func show_notification(text: String, duration: float = 2.0) -> void:
+	AudioManager.play_sfx(preload("res://assets/audio/sfx/SFX_Positive_Feedback_008.wav"))
 	is_busy = true
 	is_dialogue_mode = false
 	_hide_dialogue_elements()
