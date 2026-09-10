@@ -1,8 +1,17 @@
-[gd_scene format=4 uid="uid://b3xk1eo1tv6ry"]
+[gd_scene format=4 uid="uid://dieaiqyfyvsxb"]
 
-[ext_resource type="Script" uid="uid://cega6ac6g44fp" path="res://scenes/halaman.gd" id="1_phq7x"]
 [ext_resource type="Texture2D" uid="uid://b05klqaj0aoox" path="res://assets/tilesets/halaman/A2_Floors_MV_TILESET.png" id="2_8tyy0"]
 [ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_chn88"]
+
+[sub_resource type="GDScript" id="GDScript_phq7x"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var bgm = preload(\"res://assets/audio/music/Wildflowers By The River.ogg\")
+	AudioManager.play_music(bgm, 2.0)
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wghwo"]
 texture = ExtResource("2_8tyy0")
@@ -1685,7 +1694,7 @@ texture = ExtResource("2_8tyy0")
 sources/0 = SubResource("TileSetAtlasSource_wghwo")
 
 [node name="Halaman" type="Node2D" unique_id=1250251096]
-script = ExtResource("1_phq7x")
+script = SubResource("GDScript_phq7x")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=659288122]
 scale = Vector2(0.3, 0.3)

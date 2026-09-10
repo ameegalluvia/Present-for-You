@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bnf3fj6fgnnsh"]
+
+[ext_resource type="Script" uid="uid://y8oamlabksjr" path="res://scripts/SceneDoor.gd" id="1_6ppd4"]
+[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_eus80"]
+[ext_resource type="Texture2D" uid="uid://dsma1mdtsvojb" path="res://assets/sprites/furniture/5_Classroom_and_library_16x16.png" id="3_eus80"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eus80"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2ux0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps1b"]
+
+[node name="Jalan" type="Node2D" unique_id=2035691012]
+
+[node name="SpawnFromRumah" type="Node2D" parent="." unique_id=183671307]
+
+[node name="SpawnFromTokoBunga" type="Node2D" parent="." unique_id=629022499]
+position = Vector2(48, 0)
+
+[node name="SpawnFromTokoBoneka" type="Node2D" parent="." unique_id=644727386]
+position = Vector2(126, 0)
+
+[node name="TokoBunga" type="Area2D" parent="." unique_id=1534969989]
+position = Vector2(48, 0)
+script = ExtResource("1_6ppd4")
+target_scene = "res://scenes/TokoBunga.tscn"
+target_spawn_name = "SpawnFromJalan"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TokoBunga" unique_id=718227061]
+shape = SubResource("RectangleShape2D_eus80")
+
+[node name="TokoBoneka" type="Area2D" parent="." unique_id=1627120553]
+position = Vector2(125, 0)
+script = ExtResource("1_6ppd4")
+target_scene = "res://scenes/TokoBoneka.tscn"
+target_spawn_name = "SpawnFromJalan"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TokoBoneka" unique_id=778673704]
+shape = SubResource("RectangleShape2D_b2ux0")
+
+[node name="Lievia" type="Area2D" parent="." unique_id=1725447828]
+position = Vector2(191, 0)
+script = ExtResource("1_6ppd4")
+target_scene = "res://scenes/Lievia.tscn"
+target_spawn_name = "SpawnFromJalan"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lievia" unique_id=316027239]
+shape = SubResource("RectangleShape2D_jps1b")
+
+[node name="Player" parent="." unique_id=180642863 instance=ExtResource("2_eus80")]
+
+[node name="5ClassroomAndLibrary16x16" type="Sprite2D" parent="." unique_id=16012764]
+position = Vector2(114, 296)
+texture = ExtResource("3_eus80")

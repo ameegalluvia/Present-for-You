@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dlot6ypquper0"]
+
+[ext_resource type="Script" uid="uid://y8oamlabksjr" path="res://scripts/SceneDoor.gd" id="1_v7anq"]
+[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_tu3h0"]
+[ext_resource type="Texture2D" uid="uid://r3lpf5bgyb1x" path="res://assets/sprites/furniture/4_Bedroom_16x16.png" id="3_y1m57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1m57"]
+
+[node name="TokoBunga" type="Node2D" unique_id=1479764692]
+
+[node name="SpawnFromJalanBunga" type="Node2D" parent="." unique_id=2043998261]
+position = Vector2(48, 0)
+
+[node name="Jalan" type="Area2D" parent="." unique_id=1133514862]
+position = Vector2(48, 0)
+script = ExtResource("1_v7anq")
+target_scene = "res://scenes/Jalan.tscn"
+target_spawn_name = "SpawnFromTokoBunga"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jalan" unique_id=435764931]
+shape = SubResource("RectangleShape2D_y1m57")
+
+[node name="Player" parent="." unique_id=180642863 instance=ExtResource("2_tu3h0")]
+
+[node name="4Bedroom16x16" type="Sprite2D" parent="." unique_id=1318831916]
+position = Vector2(212, 512)
+texture = ExtResource("3_y1m57")

@@ -9,15 +9,19 @@ func _ready() -> void:
 	AudioManager.play_music(bgm)
 	
 	MessageBox.show_dialogue([
-		{"speaker": "Lievia", "text": "Halo paiz, lagi ngapain?"},
-		{"speaker": "Kamu", "text": "Lagi santai aja di kamar, kalau kamu?"},
-		{"speaker": "Lievia", "text": "Samaaa"},
-		{"speaker": "Kamu", "text": "Mmm, kangenn.. Mo ketemu :("},
-		{"speaker": "Lievia", "text": "Bolee, di rumahku aja"},
-		{"speaker": "Kamu", "text": "Wuah bolehh nihh?"},
-		{"speaker": "Lievia", "text": "Bolehh paiz"},
-		{"speaker": "Kamu", "text": "Okeii gas otw babaii"},
-		{"speaker": "Lievia", "text": "Eee-"}
+		{"speaker": "Kamu", "text": "Aloo lipii, selamat ulang tahun yaah"},
+		{"speaker": "Lievia", "text": "Eee- tiba tiba banget, makasii"},
+		{"speaker": "Kamu", "text": "Hehe sama sama, kamu lagi apa?"},
+		{"speaker": "Lievia", "text": "Akuu lagi bikin kue ini"},
+		{"speaker": "Kamu", "text": "Wuahh, enaknyaa.. Kue apa?"},
+		{"speaker": "Lievia", "text": "Kue ulang tahun :D bikin bareng mamah"},
+		{"speaker": "Kamu", "text": "Mmm, mau ikuutt"},
+		{"speaker": "Lievia", "text": "Tapi bentar lagi selesaii"},
+		{"speaker": "Lievia", "text": "Kalau mau, kamu ke rumah ajaa :D"},
+		{"speaker": "Kamu", "text": "Wihh boleh nii?"},
+		{"speaker": "Lievia", "text": "Bolehh koo, sekalian mam kue bareng"},
+		{"speaker": "Kamu", "text": "Oteii, aku otw sekarang yaah >//<"},
+		{"speaker": "Lievia", "text": "Eee- okee, hati hati yaah :D"}
 	])
 	
 	await MessageBox.dialogue_finished
