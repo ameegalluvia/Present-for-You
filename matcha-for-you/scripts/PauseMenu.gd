@@ -14,6 +14,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	panel.hide()
 	confirm_panel.hide()
+	hide()
 	pause_button.pressed.connect(_on_pause_pressed)
 	resume_button.pressed.connect(_on_resume_pressed)
 	main_menu_button.pressed.connect(_on_main_menu_pressed)

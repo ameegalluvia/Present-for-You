@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Matcha for You"
-run/main_scene="uid://d4hlucp5xp1mo"
+run/main_scene="uid://dltiansjxxrhb"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

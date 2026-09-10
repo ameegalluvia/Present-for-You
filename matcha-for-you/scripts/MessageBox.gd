@@ -47,6 +47,8 @@ func show_dialogue(lines: Array) -> void:
 
 func _display_current_line() -> void:
 	var line: Dictionary = dialogue_lines[current_index]
+	speaker_label.show()
+	text_label.show()
 	speaker_label.text = line.speaker
 	text_label.text = line.text
 	portrait_kamu.hide()

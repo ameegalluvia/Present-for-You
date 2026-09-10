@@ -12,7 +12,7 @@ region = Rect2(608, 256, 16, 16)
 bg_color = Color(0, 0, 0, 0.7137255)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukcvp"]
-bg_color = Color(0.09206522, 0.09315387, 0.096136056, 1)
+bg_color = Color(0.09019608, 0.09411765, 0.09803922, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
 content_margin_left = 13.0
@@ -138,7 +138,7 @@ offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_n5dsq")
-text = "Yakin mau ke Main Menu?"
+text = "Yakin mau ke Main Menu? Nanti ngulang lagi lohh"
 horizontal_alignment = 1
 vertical_alignment = 1
 
