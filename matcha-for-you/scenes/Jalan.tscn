@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bnf3fj6fgnnsh"]
 
 [ext_resource type="Script" uid="uid://y8oamlabksjr" path="res://scripts/SceneDoor.gd" id="1_6ppd4"]
+[ext_resource type="Script" uid="uid://b200qg0e0clth" path="res://scripts/Music/jalanmusic.gd" id="1_b2ux0"]
 [ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_eus80"]
 [ext_resource type="Texture2D" uid="uid://dsma1mdtsvojb" path="res://assets/sprites/furniture/5_Classroom_and_library_16x16.png" id="3_eus80"]
 
@@ -11,6 +12,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jps1b"]
 
 [node name="Jalan" type="Node2D" unique_id=2035691012]
+script = ExtResource("1_b2ux0")
 
 [node name="SpawnFromRumah" type="Node2D" parent="." unique_id=183671307]
 
