@@ -9,10 +9,8 @@
 [node name="TokoBunga" type="Node2D" unique_id=1479764692]
 
 [node name="SpawnFromJalanBunga" type="Node2D" parent="." unique_id=2043998261]
-position = Vector2(48, 0)
 
 [node name="Jalan" type="Area2D" parent="." unique_id=1133514862]
-position = Vector2(48, 0)
 script = ExtResource("1_v7anq")
 target_scene = "res://scenes/Jalan.tscn"
 target_spawn_name = "SpawnFromTokoBunga"
