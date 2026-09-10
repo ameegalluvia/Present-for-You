@@ -1,111 +1,101 @@
 [gd_scene format=3 uid="uid://dltiansjxxrhb"]
 
-[ext_resource type="Script" uid="uid://blcyga8lxrcdh" path="res://scenes/MainMenu.gd" id="1_0ykhv"]
-[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="2_2wh52"]
+[ext_resource type="Script" uid="uid://3ah3ujvj6m3b" path="res://scripts/MainMenu.gd" id="1_yqorp"]
+[ext_resource type="FontFile" uid="uid://beyudpa0w3nh4" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="2_0ykhv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6usuf"]
-content_margin_left = 13.0
-content_margin_right = 13.0
-bg_color = Color(0.8949794, 0.50942534, 9.62615e-07, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
-content_margin_left = 13.0
-content_margin_right = 13.0
-bg_color = Color(0.9999998, 0.6184983, 0.23921385, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l72w3"]
-content_margin_left = 13.0
-content_margin_right = 13.0
-bg_color = Color(0.28568262, 0.733932, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_826wr"]
-content_margin_left = 13.0
-content_margin_right = 13.0
-bg_color = Color(0.35876325, 0.9007816, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucygd"]
-content_margin_left = 13.0
-content_margin_right = 13.0
-bg_color = Color(0.81969535, 0, 0.20542729, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mipys"]
-content_margin_left = 13.0
-content_margin_right = 13.0
-bg_color = Color(0.9999297, 0.27838865, 0.3467673, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
+bg_color = Color(0.09019608, 0.09411765, 0.09803922, 1)
 
 [node name="MainMenu" type="Control" unique_id=942151033]
 layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_0ykhv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqorp")
 
-[node name="Present for You" type="Label" parent="." unique_id=1336224456]
-layout_mode = 0
-offset_left = 244.0
-offset_top = 130.0
-offset_right = 385.0
-offset_bottom = 153.0
-theme_override_fonts/font = ExtResource("2_2wh52")
-text = "Present for You"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1494716301]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -50.5
+offset_right = 49.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="New Game" type="Button" parent="." unique_id=1040875814]
-layout_mode = 0
-offset_left = 261.0
-offset_top = 168.0
-offset_right = 381.0
-offset_bottom = 199.0
-theme_override_fonts/font = ExtResource("2_2wh52")
-theme_override_styles/normal = SubResource("StyleBoxFlat_6usuf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ow34m")
-text = "Mulai Baru"
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1040875814]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ykhv")
+text = "Main"
 
-[node name="Continue" type="Button" parent="." unique_id=325916574]
-layout_mode = 0
-offset_left = 261.0
-offset_top = 211.0
-offset_right = 381.0
-offset_bottom = 242.0
-theme_override_fonts/font = ExtResource("2_2wh52")
-theme_override_styles/normal = SubResource("StyleBoxFlat_l72w3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_826wr")
-text = "Lanjutkan"
+[node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=300666724]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ykhv")
+text = "Pengaturan"
 
-[node name="Exit" type="Button" parent="." unique_id=382131685]
-layout_mode = 0
-offset_left = 261.0
-offset_top = 252.0
-offset_right = 381.0
-offset_bottom = 283.0
-theme_override_fonts/font = ExtResource("2_2wh52")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ucygd")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mipys")
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=659045154]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ykhv")
 text = "Keluar"
 
-[connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[node name="SettingsPanel" type="Panel" parent="." unique_id=1617210358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ykhv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=1537283409]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.09601
+offset_top = -63.0
+offset_right = 138.09601
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Musik" type="Label" parent="SettingsPanel/VBoxContainer" unique_id=509007125]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ykhv")
+text = "Musik:"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/VBoxContainer" unique_id=1547870157]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="SFX" type="Label" parent="SettingsPanel/VBoxContainer" unique_id=124374623]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ykhv")
+text = "Efek Suara:"
+
+[node name="SfxSlider" type="HSlider" parent="SettingsPanel/VBoxContainer" unique_id=1913490683]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="BackButton" type="Button" parent="SettingsPanel/VBoxContainer" unique_id=466006739]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ykhv")
+text = "Kembali"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="SettingsPanel/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="SettingsPanel/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

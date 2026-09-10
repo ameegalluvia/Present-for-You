@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b3xk1eo1tv6ry"]
+
+[ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="1_y6kh7"]
+[ext_resource type="Texture2D" uid="uid://chim07urmqmnw" path="res://assets/sprites/furniture/14_Basement_16x16.png" id="2_ifpnw"]
+
+[node name="Lievia" type="Node2D" unique_id=1129179369]
+
+[node name="Player" parent="." unique_id=180642863 instance=ExtResource("1_y6kh7")]
+
+[node name="SpawnFromJalanBunga" type="Node2D" parent="." unique_id=296099164]
+
+[node name="14Basement16x16" type="Sprite2D" parent="." unique_id=2037341813]
+position = Vector2(162, 50)
+texture = ExtResource("2_ifpnw")

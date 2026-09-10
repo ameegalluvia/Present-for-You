@@ -30,7 +30,7 @@ InteractionManager="*uid://ca4sw715ygjki"
 InteractButton="*uid://ci38gx2u4n8re"
 AudioManager="*uid://ba6w0ajivcbig"
 PauseMenu="*uid://cxfc8kpw2bv3v"
-SaveManager="*uid://cg7pcpmiiwf78"
+SceneTransition="*uid://b5iaw7h5yv0yw"
 
 [display]
 

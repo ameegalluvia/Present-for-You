@@ -1,12 +1,20 @@
 extends CharacterBody2D
 
-@export var speed: float = 40.0
+@export var speed: float = 300.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var last_direction: String = "down"
 
 var override_animation: String = ""
+
+func _ready() -> void: 
+	override_animation = "" 
+	if SceneTransition.target_spawn_name != "": 
+		var spawn_pos = SceneTransition.get_spawn_position(get_tree().current_scene) 
+		if spawn_pos != Vector2.ZERO: 
+			global_position = spawn_pos 
+		SceneTransition.target_spawn_name = ""
 
 func _physics_process(delta: float) -> void:
 	if MessageBox.is_busy:
