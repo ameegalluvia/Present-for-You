@@ -572,6 +572,7 @@ radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=180642863]
 physics_interpolation_mode = 1
+y_sort_enabled = true
 script = ExtResource("1_gmlin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=642543484]
@@ -610,6 +611,7 @@ action_left = &"move_left"
 action_right = &"move_right"
 action_up = &"move_up"
 action_down = &"move_down"
+metadata/_edit_use_anchors_ = true
 
 [node name="InteractionRange" type="Area2D" parent="." unique_id=381111213]
 script = ExtResource("4_lvxji")
