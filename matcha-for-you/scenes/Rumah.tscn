@@ -38,7 +38,7 @@
 [ext_resource type="Script" uid="uid://6l5ktpqldnl7" path="res://scripts/QuestTrigger.gd" id="36_urs1c"]
 [ext_resource type="PackedScene" uid="uid://ci38gx2u4n8re" path="res://scenes/ui/InteractButton.tscn" id="37_s70a1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3my7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jl5u7"]
 texture = ExtResource("1_v70ow")
 1:0/0 = 0
 3:0/0 = 0
@@ -141,7 +141,7 @@ texture = ExtResource("1_v70ow")
 2:11/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_obxn5"]
-sources/0 = SubResource("TileSetAtlasSource_n3my7")
+sources/0 = SubResource("TileSetAtlasSource_jl5u7")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_laqnb"]
 polygon = PackedVector2Array(3, -5, 8, -5, 8, 8, 3, 8)
@@ -165,7 +165,7 @@ polygon = PackedVector2Array(-8, 3, 2, 3, 2, -8, 8, -8, 8, 3, 8, 8, -8, 8)
 polygon = PackedVector2Array(2, 8, 2, -3, -8, -3, -8, -8, 3, -8, 8, -8, 8, 8)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_apady"]
-polygon = PackedVector2Array(-8, -5, 8, -5, 8, 8, -8, 8)
+polygon = PackedVector2Array(-8, -6, 8, -6, 8, 8, -8, 8)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ewdbg"]
 polygon = PackedVector2Array(-8, -3, -8, -8, 8, -8, 8, -3)
@@ -177,7 +177,7 @@ polygon = PackedVector2Array(-8, 8, -8, -8, -2, -8, -2, 3, 8, 3, 8, 8)
 polygon = PackedVector2Array(8, -3, -2, -3, -2, 8, -8, 8, -8, -3, -8, -8, 8, -8)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8kqvr"]
-polygon = PackedVector2Array(-8, -5, 8, -5, 8, 8, -8, 8)
+polygon = PackedVector2Array(-8, -6, 8, -6, 8, 8, -8, 8)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fxk60"]
 polygon = PackedVector2Array(-8, -3, -8, -8, 8, -8, 8, -3)
@@ -15984,45 +15984,6 @@ sources/25 = SubResource("TileSetAtlasSource_i6ixp")
 sources/26 = SubResource("TileSetAtlasSource_8dvx8")
 sources/5 = SubResource("TileSetAtlasSource_qtsu8")
 
-[sub_resource type="Gradient" id="Gradient_laqnb"]
-colors = PackedColorArray(0.8754847, 0.6321374, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_rwxtm"]
-gradient = SubResource("Gradient_laqnb")
-fill = 1
-fill_from = Vector2(0.47578347, 0.3019943)
-
-[sub_resource type="Environment" id="Environment_jps1b"]
-background_mode = 3
-tonemap_mode = 1
-tonemap_exposure = 0.79
-glow_enabled = true
-glow_intensity = 2.76
-glow_strength = 1.02
-glow_bloom = 0.14
-
-[sub_resource type="Gradient" id="Gradient_rdybt"]
-offsets = PackedFloat32Array(0, 0.8401084)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jps1b"]
-gradient = SubResource("Gradient_rdybt")
-fill = 1
-fill_from = Vector2(0.50427353, 0.5014245)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_77v7f"]
-gradient = SubResource("Gradient_rdybt")
-fill = 1
-fill_from = Vector2(0.50427353, 0.5014245)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_urs1c"]
-gradient = SubResource("Gradient_rdybt")
-fill = 1
-fill_from = Vector2(0.50427353, 0.5014245)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5igr"]
-size = Vector2(20, 37)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eogk2"]
 texture = ExtResource("23_iaysq")
 9:0/0 = 0
@@ -16483,11 +16444,14 @@ texture = ExtResource("23_iaysq")
 7:33/0 = 0
 8:33/0 = 0
 0:34/0 = 0
-0:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 10, -8, 10)
+0:34/0/y_sort_origin = -6
+0:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 6, -8, 6)
 1:34/0 = 0
-1:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 10, -8, 10)
+1:34/0/y_sort_origin = -6
+1:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 6, -8, 6)
 2:34/0 = 0
-2:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 10, -8, 10)
+2:34/0/y_sort_origin = -6
+2:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 6, -8, 6)
 3:34/0 = 0
 4:34/0 = 0
 7:34/0 = 0
@@ -16783,9 +16747,11 @@ texture = ExtResource("23_iaysq")
 0:60/0 = 0
 1:60/0 = 0
 2:60/0 = 0
-2:60/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+2:60/0/y_sort_origin = -6
+2:60/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
 3:60/0 = 0
-3:60/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+3:60/0/y_sort_origin = -6
+3:60/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
 4:60/0 = 0
 5:60/0 = 0
 6:60/0 = 0
@@ -16985,9 +16951,11 @@ texture = ExtResource("23_iaysq")
 2:74/0 = 0
 3:74/0 = 0
 4:74/0 = 0
-4:74/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+4:74/0/y_sort_origin = -6
+4:74/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1, -8, -1)
 5:74/0 = 0
-5:74/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+5:74/0/y_sort_origin = -6
+5:74/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1, -8, -1)
 6:74/0 = 0
 8:74/0 = 0
 9:74/0 = 0
@@ -18281,7 +18249,8 @@ texture = ExtResource("3_utv8i")
 4:58/0 = 0
 5:58/0 = 0
 6:58/0 = 0
-6:58/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+6:58/0/y_sort_origin = -6
+6:58/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
 7:58/0 = 0
 8:58/0 = 0
 9:58/0 = 0
@@ -18564,6 +18533,7 @@ texture = ExtResource("18_fxk60")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
+2:2/0/y_sort_origin = 5
 3:2/0 = 0
 4:2/0 = 0
 5:2/0 = 0
@@ -18579,7 +18549,8 @@ texture = ExtResource("18_fxk60")
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, 6, 5, 6, 6, -5, -5, -6)
+2:3/0/y_sort_origin = 5
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1, 8, 2, 8, 8, -8, 8)
 3:3/0 = 0
 4:3/0 = 0
 5:3/0 = 0
@@ -18908,7 +18879,8 @@ texture = ExtResource("21_xvxri")
 10:14/0 = 0
 11:14/0 = 0
 12:14/0 = 0
-12:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+12:14/0/y_sort_origin = -6
+12:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1, -8, -1)
 13:14/0 = 0
 14:14/0 = 0
 15:14/0 = 0
@@ -19850,7 +19822,8 @@ texture = ExtResource("25_n4coh")
 15:39/0 = 0
 0:40/0 = 0
 1:40/0 = 0
-1:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+1:40/0/y_sort_origin = -6
+1:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1, -8, -1)
 2:40/0 = 0
 3:40/0 = 0
 4:40/0 = 0
@@ -20137,7 +20110,8 @@ texture = ExtResource("7_77v7f")
 2:12/0 = 0
 3:12/0 = 0
 4:12/0 = 0
-4:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+4:12/0/y_sort_origin = -15
+4:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
 5:12/0 = 0
 6:12/0 = 0
 7:12/0 = 0
@@ -20176,7 +20150,8 @@ texture = ExtResource("7_77v7f")
 5:14/0 = 0
 6:14/0 = 0
 7:14/0 = 0
-7:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+7:14/0/y_sort_origin = -15
+7:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
 8:14/0 = 0
 9:14/0 = 0
 10:14/0 = 0
@@ -20222,11 +20197,14 @@ texture = ExtResource("7_77v7f")
 4:17/0 = 0
 5:17/0 = 0
 6:17/0 = 0
-6:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+6:17/0/y_sort_origin = -15
+6:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
 7:17/0 = 0
-7:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+7:17/0/y_sort_origin = -15
+7:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
 8:17/0 = 0
-8:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+8:17/0/y_sort_origin = -15
+8:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
 9:17/0 = 0
 10:17/0 = 0
 12:17/0 = 0
@@ -20445,7 +20423,9 @@ texture = ExtResource("7_77v7f")
 14:32/0 = 0
 15:32/0 = 0
 0:33/0 = 0
+0:33/0/y_sort_origin = 20
 1:33/0 = 0
+1:33/0/y_sort_origin = 6
 3:33/0 = 0
 4:33/0 = 0
 6:33/0 = 0
@@ -20459,8 +20439,9 @@ texture = ExtResource("7_77v7f")
 14:33/0 = 0
 15:33/0 = 0
 0:34/0 = 0
-0:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2, 8, -2, 8, 8, -8, 8)
+0:34/0/y_sort_origin = 6
 1:34/0 = 0
+1:34/0/y_sort_origin = 6
 2:34/0 = 0
 3:34/0 = 0
 4:34/0 = 0
@@ -20476,7 +20457,8 @@ texture = ExtResource("7_77v7f")
 14:34/0 = 0
 15:34/0 = 0
 0:35/0 = 0
-0:35/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3, -8, 3)
+0:35/0/y_sort_origin = -6
+0:35/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1, -8, -1)
 1:35/0 = 0
 2:35/0 = 0
 3:35/0 = 0
@@ -21631,6 +21613,7 @@ texture = ExtResource("23_iaysq")
 0:68/0 = 0
 1:68/0 = 0
 2:68/0 = 0
+2:68/0/y_sort_origin = -6
 2:68/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4, 8, -4, 8, 3, -8, 3)
 3:68/0 = 0
 4:68/0 = 0
@@ -25926,6 +25909,45 @@ sources/2 = SubResource("TileSetAtlasSource_c5jyb")
 sources/3 = SubResource("TileSetAtlasSource_vdc7p")
 sources/4 = SubResource("TileSetAtlasSource_s70a1")
 
+[sub_resource type="Gradient" id="Gradient_laqnb"]
+colors = PackedColorArray(0.8754847, 0.6321374, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rwxtm"]
+gradient = SubResource("Gradient_laqnb")
+fill = 1
+fill_from = Vector2(0.47578347, 0.3019943)
+
+[sub_resource type="Environment" id="Environment_jps1b"]
+background_mode = 3
+tonemap_mode = 1
+tonemap_exposure = 0.79
+glow_enabled = true
+glow_intensity = 2.76
+glow_strength = 1.02
+glow_bloom = 0.14
+
+[sub_resource type="Gradient" id="Gradient_rdybt"]
+offsets = PackedFloat32Array(0, 0.8401084)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jps1b"]
+gradient = SubResource("Gradient_rdybt")
+fill = 1
+fill_from = Vector2(0.50427353, 0.5014245)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_77v7f"]
+gradient = SubResource("Gradient_rdybt")
+fill = 1
+fill_from = Vector2(0.50427353, 0.5014245)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_urs1c"]
+gradient = SubResource("Gradient_rdybt")
+fill = 1
+fill_from = Vector2(0.50427353, 0.5014245)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5igr"]
+size = Vector2(20, 37)
+
 [sub_resource type="Gradient" id="Gradient_77v7f"]
 offsets = PackedFloat32Array(0, 0.24119242)
 colors = PackedColorArray(0.62233484, 0.39400133, 0, 1, 0, 0, 0, 1)
@@ -26095,6 +26117,7 @@ size = Vector2(29, 20)
 
 [node name="Rumah" type="Node2D" unique_id=2051207229]
 y_sort_enabled = true
+script = ExtResource("1_rvf7k")
 
 [node name="BG" type="TileMapLayer" parent="." unique_id=1353872827]
 z_index = -2
@@ -26110,6 +26133,16 @@ tile_set = SubResource("TileSet_6usuf")
 z_index = -1
 tile_map_data = PackedByteArray("AAABAAEAAAAFABgAAAACAAEAAAAFABgAAAADAAEAAAAFABgAAAAEAAEAAAAFABgAAAAAAAEAAAADABgAAAAFAAEAAAAEABgAAAAAAAAAAAADABYAAAAFAAAAAAAEABYAAAAAAAIAAAADABcAAAAFAAIAAAAEABcAAAABAAAAAAAFABYAAAACAAAAAAAFABYAAAADAAAAAAAFABYAAAAEAAAAAAAFABYAAAABAAIAAAAFABcAAAACAAIAAAAFABcAAAADAAIAAAAFABcAAAAEAAIAAAAFABcAAAAWAAUAAAAFABgAAAAXAAUAAAAFABgAAAAYAAUAAAAFABgAAAAZAAUAAAAFABgAAAAZAAYAAAAFABgAAAAZAAcAAAAFABgAAAAZAAgAAAAFABgAAAAYAAgAAAAFABgAAAAYAAcAAAAFABgAAAAXAAcAAAAFABgAAAAWAAcAAAAFABgAAAAWAAYAAAAFABgAAAAXAAYAAAAFABgAAAAYAAYAAAAFABgAAAAXAAgAAAAFABgAAAAWAAgAAAAFABgAAAAVAAkAAAADABcAAAAaAAkAAAAEABcAAAAaAAQAAAAEABYAAAAVAAQAAAADABYAAAAWAAQAAAAFABYAAAAXAAQAAAAFABYAAAAYAAQAAAAFABYAAAAZAAQAAAAFABYAAAAWAAkAAAAFABcAAAAXAAkAAAAFABcAAAAYAAkAAAAFABcAAAAZAAkAAAAFABcAAAAVAAUAAAADABgAAAAVAAYAAAADABgAAAAVAAcAAAADABgAAAAVAAgAAAADABgAAAAaAAUAAAAEABgAAAAaAAYAAAAEABgAAAAaAAcAAAAEABgAAAAaAAgAAAAEABgAAAAnAAcABQAHAEMAAAAnAAgABQAHAEQAAAAoAAcABQAJAEMAAAAoAAgABQAJAEQAAAApAAcABQAJAEMAAAApAAgABQAJAEQAAAAqAAcABQAIAEMAAAAqAAgABQAIAEQAAAApAAoABQANAEMAAAApAAsABQANAEQAAAAtAAoABQAOAEMAAAAtAAsABQAOAEQAAAAqAAoABQAPAEMAAAAqAAsABQAPAEQAAAArAAoABQAPAEMAAAArAAsABQAPAEQAAAAsAAoABQAPAEMAAAAsAAsABQAPAEQAAAD8////BQAEAAcAAAD9////BQAFAAcAAAD+////BQAGAAcAAAD9/wAABQAFAAgAAAD8/wAABQAEAAgAAAD7////BQADAAcAAAD7/wAABQADAAgAAAD9/wEABQAFAAkAAAD8/wEABQAEAAkAAAD+/wEABQAGAAkAAAD+/wAABQAGAAgAAAD7/wEABQADAAkAAAD8//7/BQAEAAYAAAD9//7/BQAFAAYAAAD+//7/BQAGAAYAAAA=")
 tile_set = SubResource("TileSet_1hmm1")
+
+[node name="Furniture" type="TileMapLayer" parent="." unique_id=1602859881]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD///z/AAACADoAAAD///3/AAACADsAAAD///7/AAACADwAAAAAAPz/AAADADoAAAAAAP3/AAADADsAAAAAAP7/AAADADwAAAACAPz/AAAIAEcAAAACAP3/AAAIAEgAAAD9//3/AAAFAEoAAAD8//z/AAAEAEgAAAD8//v/AAAEAEcAAAD5//v/AQAIADAAAAD5//z/AQAIADEAAAD6//v/AQAJADAAAAD6//z/AQAJADEAAAD7//v/AQAKADAAAAD7//z/AQAKADEAAAAEAPv/AAAAAGIAAAAEAPz/AAAAAGMAAAAEAP3/AAAAAGQAAAAFAPv/AAABAGIAAAAFAPz/AAABAGMAAAAFAP3/AAABAGQAAAAGAPv/AAACAGIAAAAGAPz/AAACAGMAAAD9//z/AAAFAEkAAAABAPz/AQAGADkAAAABAP3/AQAGADoAAAD+//z/AQAGADkAAAD+//3/AQAGADoAAAAGAP3/AAACAGQAAAD5/wEAAgACAAIAAAD5/wIAAgACAAMAAAADAPv/BAANAC0AAAADAPz/BAANAC4AAAADAP3/BAANAC8AAAAuAAQABQAAACEAAAAuAAUABQAAACIAAAAuAAYABQAAACMAAAAVAAkAAwAEABwAAAAVAAoAAwAEAB0AAAAWAAkAAwAFABwAAAAWAAoAAwAFAB0AAAAXAAkAAwAGABwAAAAXAAoAAwAGAB0AAAAYAAkAAwAEABwAAAAYAAoAAwAEAB0AAAAZAAkAAwAFABwAAAAZAAoAAwAFAB0AAAAaAAkAAwAGABwAAAAaAAoAAwAGAB0AAAAWAAEAAAAAACEAAAAWAAIAAAAAACIAAAAXAAEAAAACACEAAAAXAAIAAAACACIAAAAYAAEAAAACACEAAAAYAAIAAAACACIAAAAZAAEAAAABACEAAAAZAAIAAAABACIAAAAaAAEAAwAMABQAAAAaAAIAAwAMABUAAAAVAAEAAwAMABQAAAAVAAIAAwAMABUAAAAbAAEABAABACcAAAAbAAIABAABACgAAAAUAAEABAABACcAAAAUAAIABAABACgAAAAUAAAABAABACYAAAAbAAAABAABACYAAAAnAAUABQAIAAsAAAAnAAYABQAIAAwAAAAqAAsABQAGABEAAAArAAsABQAHABEAAAAsAAsABQAIABEAAAAoAAUABQAEAAYAAAAoAAYABQAEAAcAAAApAAUABQAFAAYAAAApAAYABQAFAAcAAAAqAAUABQAGAAYAAAAqAAYABQAGAAcAAAAoAAQABQALAB4AAAAaAAUAAwADACAAAAAaAAYAAwADACEAAAAaAAcAAwADACIAAAAbAAUAAwAEACAAAAAbAAYAAwAEACEAAAAbAAcAAwAEACIAAAAUAAUAAwAFACAAAAAUAAYAAwAFACEAAAAUAAcAAwAFACIAAAAVAAUAAwAGACAAAAAVAAYAAwAGACEAAAAVAAcAAwAGACIAAAAtAAUAAQAGADkAAAAtAAYAAQAGADoAAAAmAAUABQAJAAsAAAAmAAYABQAJAAwAAAArAAQABQAKABcAAAArAAUABQAKABgAAAArAAYABQAKABkAAAAsAAQABQAKABcAAAAsAAUABQAKABgAAAAsAAYABQAKABkAAAAlAAUAAQAGADkAAAAlAAYAAQAGADoAAAAkAAQABQAAACEAAAAkAAUABQAAACIAAAAkAAYABQAAACMAAAAqAAoABQAGABAAAAArAAoABQAHABAAAAAsAAoABQAIABAAAAAtAAoABQAHAA0AAAAtAAsABQAHAA4AAAApAAoABQAEAAsAAAApAAsABQAEAAwAAAAuAAoABQAAACEAAAAuAAsABQAAACIAAAAuAAwABQAAACMAAAD8//3/AAAEAEoAAAA=")
+tile_set = SubResource("TileSet_1ycfq")
+
+[node name="Barang" type="TileMapLayer" parent="." unique_id=1081626874]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAPz/AAALAEsAAAD6////AAAJAFEAAAD6/wAAAAAJAFIAAAAJAAAAAQALAAIAAAAJAAEAAQALAAMAAAAqAAUAAgAMAAcAAAAoAAUAAgAOACMAAAApAAUAAgAPACMAAAAdAAAAAwAMAAwAAAAdAAEAAwAMAA0AAAAdAAIAAwAMAA4AAAAWAAAABAAJAA4AAAAWAAEABAAJAA8AAAAXAAAABAAKAA4AAAAXAAEABAAKAA8AAAAYAAAABAAJAA4AAAAYAAEABAAJAA8AAAAZAAAABAAKAA4AAAAZAAEABAAKAA8AAAD9//v/AAAAAAQAAAD9//z/AAAAAAUAAAAMAAAAAAAOAFoAAAAMAAEAAAAOAFsAAAAgAAkAAAAOAFoAAAAgAAoAAAAOAFsAAAD8/wEAAAAAAFEAAAD9/wEAAAABAFEAAAD+/wAAAAAHAEwAAAD7////AAAGAEsAAAD8//7/AAACAEMAAAD8////AAACAEQAAAA=")
+tile_set = SubResource("TileSet_p1ut7")
 
 [node name="Lighting" type="Node2D" parent="." unique_id=1146112566]
 
@@ -26212,49 +26245,35 @@ shape = SubResource("RectangleShape2D_b5igr")
 
 [node name="InteractButton" parent="." unique_id=1332471656 instance=ExtResource("37_s70a1")]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=2025764012]
-y_sort_enabled = true
-script = ExtResource("1_rvf7k")
+[node name="Player" parent="." unique_id=180642863 groups=["player"] instance=ExtResource("28_241ci")]
+position = Vector2(-49, 8)
 
-[node name="Furniture" type="TileMapLayer" parent="Node2D" unique_id=1602859881]
-y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD///z/AAACADoAAAD///3/AAACADsAAAD///7/AAACADwAAAAAAPz/AAADADoAAAAAAP3/AAADADsAAAAAAP7/AAADADwAAAACAPz/AAAIAEcAAAACAP3/AAAIAEgAAAD9//3/AAAFAEoAAAD8//z/AAAEAEgAAAD8//v/AAAEAEcAAAD5//v/AQAIADAAAAD5//z/AQAIADEAAAD6//v/AQAJADAAAAD6//z/AQAJADEAAAD7//v/AQAKADAAAAD7//z/AQAKADEAAAAEAPv/AAAAAGIAAAAEAPz/AAAAAGMAAAAEAP3/AAAAAGQAAAAFAPv/AAABAGIAAAAFAPz/AAABAGMAAAAFAP3/AAABAGQAAAAGAPv/AAACAGIAAAAGAPz/AAACAGMAAAD9//z/AAAFAEkAAAABAPz/AQAGADkAAAABAP3/AQAGADoAAAD+//z/AQAGADkAAAD+//3/AQAGADoAAAAGAP3/AAACAGQAAAD5/wEAAgACAAIAAAD5/wIAAgACAAMAAAADAPv/BAANAC0AAAADAPz/BAANAC4AAAADAP3/BAANAC8AAAAuAAQABQAAACEAAAAuAAUABQAAACIAAAAuAAYABQAAACMAAAAVAAkAAwAEABwAAAAVAAoAAwAEAB0AAAAWAAkAAwAFABwAAAAWAAoAAwAFAB0AAAAXAAkAAwAGABwAAAAXAAoAAwAGAB0AAAAYAAkAAwAEABwAAAAYAAoAAwAEAB0AAAAZAAkAAwAFABwAAAAZAAoAAwAFAB0AAAAaAAkAAwAGABwAAAAaAAoAAwAGAB0AAAAWAAEAAAAAACEAAAAWAAIAAAAAACIAAAAXAAEAAAACACEAAAAXAAIAAAACACIAAAAYAAEAAAACACEAAAAYAAIAAAACACIAAAAZAAEAAAABACEAAAAZAAIAAAABACIAAAAaAAEAAwAMABQAAAAaAAIAAwAMABUAAAAVAAEAAwAMABQAAAAVAAIAAwAMABUAAAAbAAEABAABACcAAAAbAAIABAABACgAAAAUAAEABAABACcAAAAUAAIABAABACgAAAAUAAAABAABACYAAAAbAAAABAABACYAAAAnAAUABQAIAAsAAAAnAAYABQAIAAwAAAAqAAsABQAGABEAAAArAAsABQAHABEAAAAsAAsABQAIABEAAAAoAAUABQAEAAYAAAAoAAYABQAEAAcAAAApAAUABQAFAAYAAAApAAYABQAFAAcAAAAqAAUABQAGAAYAAAAqAAYABQAGAAcAAAAoAAQABQALAB4AAAAaAAUAAwADACAAAAAaAAYAAwADACEAAAAaAAcAAwADACIAAAAbAAUAAwAEACAAAAAbAAYAAwAEACEAAAAbAAcAAwAEACIAAAAUAAUAAwAFACAAAAAUAAYAAwAFACEAAAAUAAcAAwAFACIAAAAVAAUAAwAGACAAAAAVAAYAAwAGACEAAAAVAAcAAwAGACIAAAAtAAUAAQAGADkAAAAtAAYAAQAGADoAAAAmAAUABQAJAAsAAAAmAAYABQAJAAwAAAArAAQABQAKABcAAAArAAUABQAKABgAAAArAAYABQAKABkAAAAsAAQABQAKABcAAAAsAAUABQAKABgAAAAsAAYABQAKABkAAAAlAAUAAQAGADkAAAAlAAYAAQAGADoAAAAkAAQABQAAACEAAAAkAAUABQAAACIAAAAkAAYABQAAACMAAAAqAAoABQAGABAAAAArAAoABQAHABAAAAAsAAoABQAIABAAAAAtAAoABQAHAA0AAAAtAAsABQAHAA4AAAApAAoABQAEAAsAAAApAAsABQAEAAwAAAAuAAoABQAAACEAAAAuAAsABQAAACIAAAAuAAwABQAAACMAAAD8//3/AAAEAEoAAAA=")
-tile_set = SubResource("TileSet_1ycfq")
-
-[node name="Barang" type="TileMapLayer" parent="Node2D" unique_id=1081626874]
-y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAPz/AAALAEsAAAD6////AAAJAFEAAAD6/wAAAAAJAFIAAAAJAAAAAQALAAIAAAAJAAEAAQALAAMAAAAqAAUAAgAMAAcAAAAoAAUAAgAOACMAAAApAAUAAgAPACMAAAAdAAAAAwAMAAwAAAAdAAEAAwAMAA0AAAAdAAIAAwAMAA4AAAAWAAAABAAJAA4AAAAWAAEABAAJAA8AAAAXAAAABAAKAA4AAAAXAAEABAAKAA8AAAAYAAAABAAJAA4AAAAYAAEABAAJAA8AAAAZAAAABAAKAA4AAAAZAAEABAAKAA8AAAD9//v/AAAAAAQAAAD9//z/AAAAAAUAAAAMAAAAAAAOAFoAAAAMAAEAAAAOAFsAAAAgAAkAAAAOAFoAAAAgAAoAAAAOAFsAAAD8/wEAAAAAAFEAAAD9/wEAAAABAFEAAAD+/wAAAAAHAEwAAAD7////AAAGAEsAAAD8//7/AAACAEMAAAD8////AAACAEQAAAA=")
-tile_set = SubResource("TileSet_p1ut7")
-
-[node name="Player" parent="Node2D" unique_id=180642863 groups=["player"] instance=ExtResource("28_241ci")]
-position = Vector2(-49, -1)
-
-[node name="Camera2D" parent="Node2D/Player" index="2" unique_id=951507596]
+[node name="Camera2D" parent="Player" index="2" unique_id=951507596]
 limit_left = -150
 limit_top = -94
 limit_right = 775
 limit_bottom = 245
 
-[node name="Interactables" type="Node2D" parent="Node2D" unique_id=843123107]
+[node name="Interactables" type="Node2D" parent="." unique_id=843123107]
 y_sort_enabled = true
 
-[node name="MatchaPickup" type="Area2D" parent="Node2D/Interactables" unique_id=411545667]
+[node name="MatchaPickup" type="Area2D" parent="Interactables" unique_id=411545667]
 y_sort_enabled = true
 position = Vector2(704, 106)
 script = ExtResource("29_d548m")
 item_names = Array[String](["matcha"])
 
-[node name="PointLight2D6" type="PointLight2D" parent="Node2D/Interactables/MatchaPickup" unique_id=1816407068]
+[node name="PointLight2D6" type="PointLight2D" parent="Interactables/MatchaPickup" unique_id=1816407068]
 position = Vector2(-6, 1)
 energy = 2.89
 texture = SubResource("GradientTexture2D_rdybt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Interactables/MatchaPickup" unique_id=594563378]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/MatchaPickup" unique_id=594563378]
 position = Vector2(-7.5, -4.5)
 scale = Vector2(0.44, 1)
 shape = SubResource("RectangleShape2D_jps1b")
 
-[node name="Matcha" type="AnimatedSprite2D" parent="Node2D/Interactables/MatchaPickup" unique_id=771433667]
+[node name="Matcha" type="AnimatedSprite2D" parent="Interactables/MatchaPickup" unique_id=771433667]
 position = Vector2(-8.999939, -2)
 scale = Vector2(0.15298426, 0.15298426)
 sprite_frames = SubResource("SpriteFrames_jps1b")
@@ -26262,87 +26281,87 @@ animation = &"idle_matcha"
 autoplay = "idle_matcha"
 frame_progress = 0.57383966
 
-[node name="MilkPickup" type="Area2D" parent="Node2D/Interactables" unique_id=1361432867]
-visible = false
+[node name="MilkPickup" type="Area2D" parent="Interactables" unique_id=1361432867]
 y_sort_enabled = true
 position = Vector2(706, 108)
 script = ExtResource("29_d548m")
 item_names = Array[String](["milk"])
 
-[node name="PointLight2D6" type="PointLight2D" parent="Node2D/Interactables/MilkPickup" unique_id=1685548766]
+[node name="PointLight2D6" type="PointLight2D" parent="Interactables/MilkPickup" unique_id=1685548766]
 position = Vector2(8, 1)
 energy = 2.89
 texture = SubResource("GradientTexture2D_rdybt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Interactables/MilkPickup" unique_id=1848862957]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/MilkPickup" unique_id=1848862957]
 position = Vector2(6.5, -4.5)
 scale = Vector2(0.44, 1)
 shape = SubResource("RectangleShape2D_laqnb")
 
-[node name="Susu" type="AnimatedSprite2D" parent="Node2D/Interactables/MilkPickup" unique_id=1045303004]
+[node name="Susu" type="AnimatedSprite2D" parent="Interactables/MilkPickup" unique_id=1045303004]
 position = Vector2(6, -4)
 scale = Vector2(0.14059155, 0.14059155)
 sprite_frames = SubResource("SpriteFrames_rwxtm")
 autoplay = "default"
 frame_progress = 0.00079709303
 
-[node name="CupPickup" type="Area2D" parent="Node2D/Interactables" unique_id=631233775]
+[node name="CupPickup" type="Area2D" parent="Interactables" unique_id=631233775]
 y_sort_enabled = true
 position = Vector2(-8, 7)
 script = ExtResource("29_d548m")
 item_names = Array[String](["cup"])
 
-[node name="PointLight2D5" type="PointLight2D" parent="Node2D/Interactables/CupPickup" unique_id=883857180]
+[node name="PointLight2D5" type="PointLight2D" parent="Interactables/CupPickup" unique_id=883857180]
 position = Vector2(657, 98)
 energy = 2.89
 texture = SubResource("GradientTexture2D_rdybt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Interactables/CupPickup" unique_id=202257527]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/CupPickup" unique_id=202257527]
 position = Vector2(656, 92)
 scale = Vector2(0.5199902, 1)
 shape = SubResource("RectangleShape2D_rwxtm")
 
-[node name="Cangkir" type="AnimatedSprite2D" parent="Node2D/Interactables/CupPickup" unique_id=1172938595]
+[node name="Cangkir" type="AnimatedSprite2D" parent="Interactables/CupPickup" unique_id=1172938595]
 position = Vector2(657, 97)
 scale = Vector2(0.1604017, 0.1604017)
 sprite_frames = SubResource("SpriteFrames_e7x6t")
 autoplay = "default"
 frame_progress = 0.5713763
 
-[node name="IcePickup" type="Area2D" parent="Node2D/Interactables" unique_id=1119504926]
+[node name="IcePickup" type="Area2D" parent="Interactables" unique_id=1119504926]
+visible = false
 position = Vector2(243, 104)
 monitorable = false
 script = ExtResource("29_d548m")
 item_names = Array[String](["ice"])
 
-[node name="PointLight2D6" type="PointLight2D" parent="Node2D/Interactables/IcePickup" unique_id=2133443340]
+[node name="PointLight2D6" type="PointLight2D" parent="Interactables/IcePickup" unique_id=2133443340]
 position = Vector2(470, 7)
 energy = 2.89
 texture = SubResource("GradientTexture2D_rdybt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Interactables/IcePickup" unique_id=1154758674]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/IcePickup" unique_id=1154758674]
 position = Vector2(469, 0)
 scale = Vector2(0.44, 1)
 shape = SubResource("RectangleShape2D_e7x6t")
 
-[node name="Es" type="AnimatedSprite2D" parent="Node2D/Interactables/IcePickup" unique_id=459182655]
+[node name="Es" type="AnimatedSprite2D" parent="Interactables/IcePickup" unique_id=459182655]
 position = Vector2(469, 4)
 scale = Vector2(0.1753983, 0.1753983)
 sprite_frames = SubResource("SpriteFrames_6usuf")
 autoplay = "default"
 frame_progress = 0.23303904
 
-[node name="Pintu keluar" type="Area2D" parent="Node2D/Interactables" unique_id=914206478 node_paths=PackedStringArray("ice_pickup")]
+[node name="Pintu keluar" type="Area2D" parent="Interactables" unique_id=914206478 node_paths=PackedStringArray("ice_pickup")]
 position = Vector2(604, 210)
 script = ExtResource("30_utv8i")
 ice_pickup = NodePath("../IcePickup")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Interactables/Pintu keluar" unique_id=852566075]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Pintu keluar" unique_id=852566075]
 position = Vector2(-381, -17)
 scale = Vector2(0.48000002, 2)
 shape = SubResource("RectangleShape2D_6usuf")
 
 [connection signal="body_entered" from="QuestMatcha" to="QuestMatcha" method="_on_body_entered"]
-[connection signal="body_entered" from="Node2D/Interactables/Pintu keluar" to="Node2D/Interactables/Pintu keluar" method="_on_body_entered"]
+[connection signal="body_entered" from="Interactables/Pintu keluar" to="Interactables/Pintu keluar" method="_on_body_entered"]
 
-[editable path="Node2D/Player"]
+[editable path="Player"]

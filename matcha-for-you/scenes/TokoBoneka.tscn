@@ -4351,6 +4351,7 @@ tile_map_data = PackedByteArray("AAAMAPv/AQAEAEEAAAAMAPz/AQAEAEIAAAAFAAMAAQABAEM
 tile_set = SubResource("TileSet_edem5")
 
 [node name="Jalan" type="Area2D" parent="." unique_id=2038036687]
+position = Vector2(-7, 15)
 script = ExtResource("1_5pq3n")
 target_scene = "res://scenes/Jalan.tscn"
 target_spawn_name = "SpawnFromTokoBoneka"
@@ -4362,3 +4363,4 @@ shape = SubResource("RectangleShape2D_iwdm6")
 position = Vector2(-4, 24)
 
 [node name="SpawnFromJalanBunga" type="Node2D" parent="." unique_id=67294100]
+position = Vector2(-7, 15)
