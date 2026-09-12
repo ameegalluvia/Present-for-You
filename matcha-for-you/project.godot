@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Present for You"
-run/main_scene="uid://dlot6ypquper0"
+run/main_scene="uid://bnf3fj6fgnnsh"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

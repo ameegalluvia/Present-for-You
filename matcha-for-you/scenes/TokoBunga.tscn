@@ -5911,13 +5911,13 @@ shadow_enabled = true
 [node name="PointLight2D" type="PointLight2D" parent="Lighting" unique_id=1862838205]
 position = Vector2(95.90936, 2.9093432)
 scale = Vector2(3.4715831, 2.9090827)
-energy = 0.85
+energy = 0.95
 texture = SubResource("GradientTexture2D_jps1b")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Lighting" unique_id=947490486]
 position = Vector2(96.81616, 2.183848)
 scale = Vector2(3.494255, 2.9005053)
-energy = 0.85
+energy = 0.95
 texture = SubResource("GradientTexture2D_bsrga")
 
 [editable path="Player"]
