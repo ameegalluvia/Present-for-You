@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://y8oamlabksjr" path="res://scripts/SceneDoor.gd" id="1_5pq3n"]
 [ext_resource type="Texture2D" uid="uid://cwm78x7t0ornk" path="res://assets/tilesets/rumah/Tileset_16x16_5.png" id="1_h7i34"]
+[ext_resource type="Script" uid="uid://did4fd27yommk" path="res://scripts/tokobonekamusic.gd" id="1_jqjla"]
 [ext_resource type="Texture2D" uid="uid://rxwucvax3nf8" path="res://assets/tilesets/rumah/Tileset_16x16_19.png" id="1_qcmgi"]
 [ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_2kkt5"]
 [ext_resource type="Texture2D" uid="uid://bddhlplk2s83a" path="res://assets/tilesets/rumah/Tileset_16x16_6.png" id="2_qcmgi"]
@@ -6380,6 +6381,7 @@ fill_to = Vector2(0, 1)
 
 [node name="TokoBoneka" type="Node2D" unique_id=670358956]
 y_sort_enabled = true
+script = ExtResource("1_jqjla")
 
 [node name="BG" type="TileMapLayer" parent="." unique_id=2105655805]
 z_index = -2
