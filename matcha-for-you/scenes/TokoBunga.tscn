@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://ca70timi7ufgy" path="res://scenes/player/player.tscn" id="2_tu3h0"]
 [ext_resource type="Texture2D" uid="uid://dot6q5fsqykeq" path="res://assets/sprites/furniture/16_Grocery_store_16x16.png" id="3_bsrga"]
 [ext_resource type="Texture2D" uid="uid://r3lpf5bgyb1x" path="res://assets/sprites/furniture/4_Bedroom_16x16.png" id="6_2o8q3"]
+[ext_resource type="Script" uid="uid://camfd4hjuqyv4" path="res://scripts/FlowerOption.gd" id="9_2xpr0"]
+[ext_resource type="Script" uid="uid://dyhbw242qvbkv" path="res://scripts/FlowerCashier.gd" id="10_oscs7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bsrga"]
 texture = ExtResource("2_bsrga")
@@ -5828,6 +5830,7 @@ sources/1 = SubResource("TileSetAtlasSource_s16oi")
 sources/2 = SubResource("TileSetAtlasSource_2xpr0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1m57"]
+size = Vector2(7, 20)
 
 [sub_resource type="Environment" id="Environment_s16oi"]
 background_mode = 3
@@ -5849,6 +5852,15 @@ fill_from = Vector2(0, 1)
 gradient = SubResource("Gradient_fe85c")
 fill_from = Vector2(1, 0)
 fill_to = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxtm"]
+size = Vector2(16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jps1b"]
+atlas = ExtResource("3_bsrga")
+region = Rect2(112, 1176, 16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps1b"]
 
 [node name="TokoBunga" type="Node2D" unique_id=1479764692]
 y_sort_enabled = true
@@ -5884,6 +5896,7 @@ target_scene = "res://scenes/Jalan.tscn"
 target_spawn_name = "SpawnFromTokoBunga"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jalan" unique_id=435764931]
+position = Vector2(-6.5, 0)
 shape = SubResource("RectangleShape2D_y1m57")
 
 [node name="Player" parent="." unique_id=180642863 instance=ExtResource("2_tu3h0")]
@@ -5919,5 +5932,28 @@ position = Vector2(96.81616, 2.183848)
 scale = Vector2(3.494255, 2.9005053)
 energy = 0.95
 texture = SubResource("GradientTexture2D_bsrga")
+
+[node name="Mawar" type="Area2D" parent="." unique_id=1876245401]
+y_sort_enabled = true
+position = Vector2(168, -11)
+script = ExtResource("9_2xpr0")
+flower_name = "Mawar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mawar" unique_id=1206453528]
+position = Vector2(2, -13)
+shape = SubResource("RectangleShape2D_rwxtm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mawar" unique_id=1219713672]
+position = Vector2(5.9604645e-08, -9)
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_jps1b")
+offset = Vector2(0, -19.505)
+
+[node name="Kasir" type="Area2D" parent="." unique_id=1168269856]
+position = Vector2(42, -38)
+script = ExtResource("10_oscs7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kasir" unique_id=1985120503]
+shape = SubResource("RectangleShape2D_jps1b")
 
 [editable path="Player"]

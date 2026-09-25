@@ -5,6 +5,9 @@ var has_milk: bool = false
 var has_cup: bool = false
 var has_ice: bool = false
 
+var has_flower: bool = false
+var chosen_flower: String = ""
+
 func collect_item(item_name: String) -> void:
 	match item_name:
 		"matcha": has_matcha = true
@@ -26,3 +29,6 @@ func reset() -> void:
 	has_milk = false 
 	has_cup = false 
 	has_ice = false
+	
+	has_flower = false
+	chosen_flower = ""
